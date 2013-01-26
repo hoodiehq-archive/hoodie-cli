@@ -1,0 +1,26 @@
+#!/bin/sh -e
+CMD=$1
+
+if [ -z "$CMD" ]; then
+  echo "Usage: $0 <command> <parameters>"
+  echo "Commands can be:"
+  echo " new appname"
+  exit 1
+fi
+
+case "$CMD" in
+  new)
+  APPNAME=$2
+  if [ -z "$APPNAME" ]; then
+    echo "appname is empty"
+    echo "Usage: $0 new appname"
+    exit 1
+  fi
+  echo "Creating new hoodie app '$APPNAME'"
+  git clone git://github.com/hoodiehq/my-first-hoodie.git $APPNAME
+  cd $APPNAME
+  PATTERN="s,{{hoodie_appname}},$APPNAME,g"
+  perl -pi -e $PATTERN www/index.html package.json
+  npm install
+  ;;
+esac
