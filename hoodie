@@ -35,17 +35,17 @@ case "$CMD" in
       exit 2
     fi
     case "$WHAT" in
-      worker)
+      module)
         NAME=$3
         if [ -z "$NAME" ]; then
-          echo "What worker should I install?"
+          echo "What module should I install?"
           exit 3
         fi
         npm install --save git://github.com/hoodiehq/worker-$NAME.git
       ;;
 
       *)
-        echo "Usage: $0 install worker <workername>"
+        echo "Usage: $0 install module <workername>"
         exit 4
       ;;
     esac
@@ -61,14 +61,14 @@ case "$CMD" in
       worker)
         NAME=$3
         if [ -z "$NAME" ]; then
-          echo "What worker should I uninstall?"
+          echo "What module should I uninstall?"
           exit 3
         fi
         npm uninstall --save hoodie-worker-$NAME
       ;;
 
       *)
-        echo "Usage: $0 install worker <workername>"
+        echo "Usage: $0 install module <workername>"
         exit 4
       ;;
     esac
