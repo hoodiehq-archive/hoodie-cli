@@ -10,21 +10,68 @@ fi
 
 case "$CMD" in
   new)
-  APPNAME=$2
-  if [ -z "$APPNAME" ]; then
-    echo "appname is empty"
-    echo "Usage: $0 new appname"
-    exit 1
-  fi
-  echo "Creating new hoodie app '$APPNAME'"
-  git clone git://github.com/hoodiehq/my-first-hoodie.git $APPNAME
-  cd $APPNAME
-  PATTERN="s,{{hoodie_appname}},$APPNAME,g"
-  perl -pi -e $PATTERN www/index.html package.json
-  npm install
+    APPNAME=$2
+    if [ -z "$APPNAME" ]; then
+      echo "appname is empty"
+      echo "Usage: $0 new appname"
+      exit 1
+    fi
+    echo "Creating new hoodie app '$APPNAME'"
+    git clone git://github.com/hoodiehq/my-first-hoodie.git $APPNAME
+    cd $APPNAME
+    PATTERN="s,{{hoodie_appname}},$APPNAME,g"
+    perl -pi -e $PATTERN www/index.html package.json
+    npm install
   ;;
 
   start)
     npm start
   ;;
+
+  install)
+    WHAT=$2
+    if [ -z "$WHAT" ]; then
+      echo "What should I install?"
+      exit 2
+    fi
+    case "$WHAT" in
+      worker)
+        NAME=$3
+        if [ -z "$NAME" ]; then
+          echo "What worker should I install?"
+          exit 3
+        fi
+        npm install --save git://github.com/hoodiehq/worker-$NAME.git
+      ;;
+
+      *)
+        echo "Usage: $0 install worker <workername>"
+        exit 4
+      ;;
+    esac
+    ;;
+
+  uninstall)
+    WHAT=$2
+    if [ -z "$WHAT" ]; then
+      echo "What should I uninstall?"
+      exit 2
+    fi
+    case "$WHAT" in
+      worker)
+        NAME=$3
+        if [ -z "$NAME" ]; then
+          echo "What worker should I uninstall?"
+          exit 3
+        fi
+        npm uninstall --save hoodie-worker-$NAME
+      ;;
+
+      *)
+        echo "Usage: $0 install worker <workername>"
+        exit 4
+      ;;
+    esac
+    ;;
+
 esac
