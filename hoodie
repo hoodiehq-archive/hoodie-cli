@@ -23,4 +23,8 @@ case "$CMD" in
   perl -pi -e $PATTERN www/index.html package.json
   npm install
   ;;
+
+  start)
+    npm start
+  ;;
 esac
