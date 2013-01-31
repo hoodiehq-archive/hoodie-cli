@@ -1,10 +1,16 @@
 #!/bin/sh -e
 CMD=$1
 
-if [ -z "$CMD" ]; then
+usage() {
   echo "Usage: $0 <command> <parameters>"
   echo "Commands can be:"
   echo " new appname"
+  echo " module install <name>"
+  echo " module uninstall <name>"
+}
+
+if [ -z "$CMD" ]; then
+  usage
   exit 1
 fi
 
@@ -28,50 +34,44 @@ case "$CMD" in
     npm start
   ;;
 
-  install)
-    WHAT=$2
-    if [ -z "$WHAT" ]; then
-      echo "What should I install?"
+  module|modules)
+    ACTION=$2
+    if [ -z "$ACTION" ]; then
+      echo "What should I do?"
       exit 2
     fi
-    case "$WHAT" in
-      module)
+    case "$ACTION" in
+      install)
         NAME=$3
         if [ -z "$NAME" ]; then
           echo "What module should I install?"
           exit 3
         fi
         npm install --save git://github.com/hoodiehq/worker-$NAME.git
+        echo "Module $NAME installed successfully."
       ;;
 
-      *)
-        echo "Usage: $0 install module <workername>"
-        exit 4
-      ;;
-    esac
-    ;;
-
-  uninstall)
-    WHAT=$2
-    if [ -z "$WHAT" ]; then
-      echo "What should I uninstall?"
-      exit 2
-    fi
-    case "$WHAT" in
-      worker)
+      uninstall)
         NAME=$3
         if [ -z "$NAME" ]; then
           echo "What module should I uninstall?"
           exit 3
         fi
         npm uninstall --save hoodie-worker-$NAME
+        echo "Module $NAME uninstalled successfully."
       ;;
 
       *)
-        echo "Usage: $0 install module <workername>"
+        echo "Usage: $0 module uninstall <workername>"
         exit 4
       ;;
     esac
-    ;;
+  ;;
 
+  *)
+  echo "$0 Unknown Command"
+  echo
+  usage
+  exit 1
+  ;;
 esac
