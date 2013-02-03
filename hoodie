@@ -5,6 +5,7 @@ usage() {
   echo "Usage: $0 <command> <parameters>"
   echo "Commands can be:"
   echo " new appname"
+  echo " start"
   echo " module install <name>"
   echo " module uninstall <name>"
 }
