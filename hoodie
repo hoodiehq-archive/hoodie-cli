@@ -2,12 +2,16 @@
 CMD=$1
 
 usage() {
+  echo ""
   echo "Usage: $0 <command> <parameters>"
-  echo "Commands can be:"
-  echo " new appname"
-  echo " start"
-  echo " module install <name>"
-  echo " module uninstall <name>"
+  echo ""
+  echo "  new <appname> [<template>]"
+  echo "  start"
+  echo "  module install <name>"
+  echo "  module uninstall <name>"
+  echo
+  echo "<template> is a GitHub user/repo combo."
+  echo "The default template is 'hoodiehq/my-first-hoodie'."
 }
 
 if [ -z "$CMD" ]; then
@@ -18,16 +22,20 @@ fi
 case "$CMD" in
   new)
     APPNAME=$2
+    TEMPLATE=$3
     if [ -z "$APPNAME" ]; then
-      echo "appname is empty"
-      echo "Usage: $0 new appname"
+      echo "Error: <appname> is empty"
+      usage
       exit 1
     fi
-    echo "Creating new hoodie app '$APPNAME'"
-    git clone git://github.com/hoodiehq/my-first-hoodie.git $APPNAME
+    if [ -z "$TEMPLATE" ]; then
+      TEMPLATE="hoodiehq/my-first-hoodie"
+    fi
+    echo "Creating new hoodie app '$APPNAME' with template '$TEMPLATE'"
+    git clone git://github.com/$TEMPLATE.git $APPNAME
     cd $APPNAME
     PATTERN="s,{{hoodie_appname}},$APPNAME,g"
-    perl -pi -e $PATTERN www/index.html package.json
+    perl -pi -e $PATTERN `grep -ril {{hoodie_appname}} *`
     npm install
   ;;
 
@@ -38,14 +46,18 @@ case "$CMD" in
   module|modules)
     ACTION=$2
     if [ -z "$ACTION" ]; then
+      echo
       echo "What should I do?"
+      usage
       exit 2
     fi
     case "$ACTION" in
-      install)
+      install|i)
         NAME=$3
         if [ -z "$NAME" ]; then
+          echo
           echo "What module should I install?"
+          usage
           exit 3
         fi
         npm install --save git://github.com/hoodiehq/worker-$NAME.git
@@ -55,7 +67,9 @@ case "$CMD" in
       uninstall)
         NAME=$3
         if [ -z "$NAME" ]; then
+          echo
           echo "What module should I uninstall?"
+          usage
           exit 3
         fi
         npm uninstall --save hoodie-worker-$NAME
@@ -63,7 +77,7 @@ case "$CMD" in
       ;;
 
       *)
-        echo "Usage: $0 module uninstall <workername>"
+        usage
         exit 4
       ;;
     esac
@@ -71,7 +85,6 @@ case "$CMD" in
 
   *)
   echo "$0 Unknown Command"
-  echo
   usage
   exit 1
   ;;
