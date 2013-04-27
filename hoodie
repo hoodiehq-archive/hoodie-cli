@@ -43,14 +43,18 @@ case "$CMD" in
   module|modules)
     ACTION=$2
     if [ -z "$ACTION" ]; then
+      echo
       echo "What should I do?"
+      usage
       exit 2
     fi
     case "$ACTION" in
-      install)
+      install|i)
         NAME=$3
         if [ -z "$NAME" ]; then
+          echo
           echo "What module should I install?"
+          usage
           exit 3
         fi
         npm install --save git://github.com/hoodiehq/worker-$NAME.git
@@ -60,7 +64,9 @@ case "$CMD" in
       uninstall)
         NAME=$3
         if [ -z "$NAME" ]; then
+          echo
           echo "What module should I uninstall?"
+          usage
           exit 3
         fi
         npm uninstall --save hoodie-worker-$NAME
@@ -68,7 +74,7 @@ case "$CMD" in
       ;;
 
       *)
-        echo "Usage: $0 module uninstall <workername>"
+        usage
         exit 4
       ;;
     esac
@@ -76,7 +82,6 @@ case "$CMD" in
 
   *)
   echo "$0 Unknown Command"
-  echo
   usage
   exit 1
   ;;
