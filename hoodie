@@ -2,12 +2,13 @@
 CMD=$1
 
 usage() {
+  echo ""
   echo "Usage: $0 <command> <parameters>"
-  echo "Commands can be:"
-  echo " new appname"
-  echo " start"
-  echo " module install <name>"
-  echo " module uninstall <name>"
+  echo ""
+  echo "  new <appname>"
+  echo "  start"
+  echo "  module install <name>"
+  echo "  module uninstall <name>"
 }
 
 if [ -z "$CMD" ]; then
@@ -18,16 +19,20 @@ fi
 case "$CMD" in
   new)
     APPNAME=$2
+    TEMPLATE=$3
     if [ -z "$APPNAME" ]; then
-      echo "appname is empty"
-      echo "Usage: $0 new appname"
+      echo "Error: <appname> is empty"
+      usage
       exit 1
     fi
+    if [ -z "$TEMPLATE" ]; then
+      TEMPLATE="hoodiehq/my-first-hoodie"
+    fi
     echo "Creating new hoodie app '$APPNAME'"
-    git clone git://github.com/hoodiehq/my-first-hoodie.git $APPNAME
+    git clone git://github.com/$TEMPLATE.git $APPNAME
     cd $APPNAME
     PATTERN="s,{{hoodie_appname}},$APPNAME,g"
-    perl -pi -e $PATTERN www/index.html package.json
+    perl -pi -e $PATTERN `grep -ril {{hoodie_appname}} *`
     npm install
   ;;
 
