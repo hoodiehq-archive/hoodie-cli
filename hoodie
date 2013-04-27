@@ -36,7 +36,7 @@ case "$CMD" in
     cd $APPNAME
     PATTERN="s,{{hoodie_appname}},$APPNAME,g"
     perl -pi -e $PATTERN `grep -ril {{hoodie_appname}} *`
-    # npm install
+    npm install
   ;;
 
   start)
