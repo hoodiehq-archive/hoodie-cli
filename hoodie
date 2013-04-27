@@ -5,10 +5,13 @@ usage() {
   echo ""
   echo "Usage: $0 <command> <parameters>"
   echo ""
-  echo "  new <appname>"
+  echo "  new <appname> [<template>]"
   echo "  start"
   echo "  module install <name>"
   echo "  module uninstall <name>"
+  echo
+  echo "<template> is a GitHub user/repo combo."
+  echo "The default template is 'hoodiehq/my-first-hoodie'."
 }
 
 if [ -z "$CMD" ]; then
@@ -28,12 +31,12 @@ case "$CMD" in
     if [ -z "$TEMPLATE" ]; then
       TEMPLATE="hoodiehq/my-first-hoodie"
     fi
-    echo "Creating new hoodie app '$APPNAME'"
+    echo "Creating new hoodie app '$APPNAME' with template '$TEMPLATE'"
     git clone git://github.com/$TEMPLATE.git $APPNAME
     cd $APPNAME
     PATTERN="s,{{hoodie_appname}},$APPNAME,g"
     perl -pi -e $PATTERN `grep -ril {{hoodie_appname}} *`
-    npm install
+    # npm install
   ;;
 
   start)
