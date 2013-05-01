@@ -91,7 +91,7 @@ IF "%1" == "module" (
             
         )
         
-        npm uninstall --save git://github.com/hoodiehq/worker-!NAME!.git
+        npm uninstall --save hoodie-worker-!NAME!.git
         ECHO.Module !NAME! uninstalled successfully.
         
         GOTO:end
