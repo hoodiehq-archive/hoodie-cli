@@ -1,0 +1,12 @@
+{
+    "name": "hoodie",
+    "version": "0.0.1",
+    
+    "preferGlobal": true,
+    
+    "dependencies": {
+        "commander": "1.1.x"
+    },
+    
+    "bin": "./bin/hoodie.js"
+}
