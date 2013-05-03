@@ -24,7 +24,7 @@ function exec(command, args, callback) {
 
 
 program
-    .version("0.1.0")
+    .version("0.1.1")
     .usage("<command> <parameters>");
 
 program
@@ -49,8 +49,7 @@ program
             process.chdir(appname);
             
             fs.writeFileSync("package.json",
-                fs.readFileSync("package.json", { encoding: "utf8" }).replace(/\{\{hoodie_appname\}\}/gi, appname),
-                { encoding: "utf8" }
+                fs.readFileSync("package.json").toString().replace(/\{\{hoodie_appname\}\}/gi, appname)
             );
             
             console.log("Replaced package.json");
