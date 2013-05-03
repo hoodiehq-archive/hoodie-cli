@@ -22,7 +22,7 @@ function exec(command, args, callback) {
 
 
 program
-    .version("0.0.1")
+    .version("0.1.0")
     .usage("<command> <parameters>");
 
 program
@@ -91,24 +91,35 @@ program
     });
 
 program
-    .command("module <action> <name>")
-    .description("Un-/Intall a hoodie module")
-    .action(function(action, name) {
+    .command("install <name>")
+    .description("Install a hoodie module")
+    .action(function(name) {
         
-        var cmd;
-        if(action === "install") {
-            cmd = "install";
-            name = "git://github.com/hoodiehq/worker-" + name + ".git";
-        } else if(action === "uninstall") cmd = "remove";
-        else {
-            console.log("Use install or uninstall as <action>");
-            process.exit(1);
-        }
+        var url = "git://github.com/hoodiehq/worker-" + name + ".git";
         
-        exec(which("npm"), [cmd, name, "--save"], function(err) {
+        exec(which("npm"), ["install", url, "--save"], function(err) {
             
             if(err) {
-                console.log("Error installing dependencies:");
+                console.log("Error installing module:");
+                throw err;
+                process.exit(1);
+            }
+            
+            console.log("Successfully installed %s", name);
+            
+        });
+        
+    });
+
+program
+    .command("uninstall <name>")
+    .description("Uninstall a hoodie module")
+    .action(function(name) {
+       
+        exec(which("npm"), ["remove", name, "--save"], function(err) {
+            
+            if(err) {
+                console.log("Error uninstalling module:");
                 throw err;
                 process.exit(1);
             }
@@ -119,11 +130,13 @@ program
         
     });
 
+
 program
     .command("*")
     .action(function() {
         console.log([
-            "Command not found",
+            "",
+            "\tCommand not found",
             "",
             "\tSee 'hoodie --help' for more information."
         ].join("\n"));

@@ -1,6 +1,6 @@
 {
     "name": "hoodie-cli",
-    "version": "0.0.1",
+    "version": "0.1.0",
     
     "preferGlobal": true,
     
@@ -9,5 +9,7 @@
         "which": "1.0.x"
     },
     
-    "bin": "./bin/hoodie.js"
+    "bin": {
+        "hoodie": "./bin/hoodie.js"
+    }
 }
