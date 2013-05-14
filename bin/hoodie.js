@@ -5,6 +5,7 @@
 var program = require("commander"),
     which = require("which").sync,
     cp = require("child_process"),
+    clc = require("cli-color"),
     fs = require("fs");
 
 function exec(command, args, callback) {
@@ -24,7 +25,7 @@ function exec(command, args, callback) {
 
 
 program
-    .version("0.1.1")
+    .version("0.1.2")
     .usage("<command> <parameters>");
 
 program
@@ -147,15 +148,29 @@ program.parse(process.argv);
 
 if(program.args.length === 0) {
     
-    console.log([
-        "      _    _    _______   _______   _____     __   ______",
-        "     / /  / /  / ___  /  / ___  /  / __  |   / /  / ____/",
-        "    / /__/ /  / /  / /  / /  / /  / /  | /  / /  / /_",
-        "   / ___  /  / /  / /  / /  / /  / /  / /  / /  / __/",
-        "  / /  / /  / /__/ /  / /__/ /  / /__/ /  / /  / /____",
-        " /_/  /_/  /______/  /______/  /______/  /_/  /______/",
-        
-        "",
-        "\t See 'hoodie --help' for more information."
-    ].join("\n"));
+    console.log("\n");
+    
+    [
+        [".d$b.  .d$b.", "  .d$$$$$$b.  ", "  .d$$$$$$b.  ", ".d$$$$$$b.  ",  ".d$b.", ".d$$$$$$$$b."],
+        ["$$$$$..$$$$$", ".$$$$$$$$$$$b ", ".$$$$$$$$$$$b ", "$$$$$$$$$$b ",  "$$$$$", "$$$$$$$$$$P'"],
+        ["$$$$$$$$$$$$", "d$$$$$$$$$$$$b", "d$$$$$$$$$$$$b", "$$$$$$$$$$$b",  "$$$$$", "$$$$$$$$$$b."],
+        ["$$$$$$$$$$$$", "Q$$$$$$$$$$$$P", "Q$$$$$$$$$$$$P", "$$$$$$$$$$$P",  "$$$$$", "$$$$$$$$$$P'"],
+        ["$$$$$´`$$$$$", "'$$$$$$$$$$$$'", "'$$$$$$$$$$$$'", "$$$$$$$$$$P ",  "$$$$$", "$$$$$$$$$$b."],
+        ["'Q$P'  'Q$P'", "  'Q$$$$$$P'  ", "  'Q$$$$$$P'  ", "'Q$$$$$$$P  ",  "'Q$P'", "'Q$$$$$$$$P'"]
+    ].forEach(function(line) {
+        var blue = clc.xterm(25);
+        var green = clc.xterm(28);
+        var yellow = clc.xterm(214);
+        var orange = clc.xterm(202);
+        var brown = clc.xterm(240);
+        var red = clc.xterm(160);
+        console.log(blue(line[0]) +
+            green(line[1]) +
+            yellow(line[2]) +
+            orange(line[3]) +
+            brown(line[4]) +
+            red(line[5]));
+    })
+
+    console.log("\n\t See 'hoodie --help' for more information.");
 }

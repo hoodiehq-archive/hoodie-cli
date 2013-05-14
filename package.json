@@ -1,15 +1,13 @@
 {
-    "name": "hoodie-cli",
-    "version": "0.1.1",
-    
-    "preferGlobal": true,
-    
-    "dependencies": {
-        "commander": "1.1.x",
-        "which": "1.0.x"
-    },
-    
-    "bin": {
-        "hoodie": "./bin/hoodie.js"
-    }
+  "name": "hoodie-cli",
+  "version": "0.1.2",
+  "preferGlobal": true,
+  "dependencies": {
+    "commander": "1.1.x",
+    "which": "1.0.x",
+    "cli-color": "~0.2.2"
+  },
+  "bin": {
+    "hoodie": "./bin/hoodie.js"
+  }
 }
