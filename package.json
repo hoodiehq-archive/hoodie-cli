@@ -1,5 +1,5 @@
 {
-  "name": "hoodie-cli",
+  "name": "hoodie",
   "version": "0.1.2",
   "preferGlobal": true,
   "dependencies": {
