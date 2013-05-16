@@ -4,10 +4,10 @@ Hoodie command line utility
 The [hoodie](http://hood.ie) cli.
 
 ## Installation
-Please ensure you have `node`, `npm` and `git` installed.
+Please ensure you have [node](http://nodejs.org) installed.
 
 ```
-npm install -g git://github.com/hoodiehq/hoodie-cmd.git
+npm install -g hoodie-cli
 ```
 
 ## Usage
