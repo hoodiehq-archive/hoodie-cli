@@ -49,9 +49,15 @@ program
             
             process.chdir(appname);
             
-            fs.writeFileSync("package.json",
-                fs.readFileSync("package.json").toString().replace(/\{\{hoodie_appname\}\}/gi, appname)
-            );
+            // Replace {{hoodie_appname}} in package.jsona nd www/index.html
+            [
+                "package.json",
+                "./www/index.html"
+            ].forEach(function(file) {
+                fs.writeFileSync(file,
+                    fs.readFileSync(file).toString().replace(/\{\{hoodie_appname\}\}/gi, appname)
+                );
+            });
             
             console.log("Replaced package.json");
             
