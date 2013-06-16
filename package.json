@@ -7,6 +7,10 @@
     "which": "1.0.x",
     "cli-color": "~0.2.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoodiehq/hoodie-cli.git"
+  },
   "bin": {
     "hoodie": "./bin/hoodie.js"
   }
