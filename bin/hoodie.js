@@ -6,7 +6,8 @@ var program = require("commander"),
     which = require("which").sync,
     cp = require("child_process"),
     clc = require("cli-color"),
-    fs = require("fs");
+    fs = require("fs"),
+    pkg = require("../package.json");
 
 function exec(command, args, callback) {
     
@@ -25,7 +26,7 @@ function exec(command, args, callback) {
 
 
 program
-    .version("0.1.2")
+    .version(pkg.version)
     .usage("<command> <parameters>");
 
 program
