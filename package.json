@@ -31,6 +31,7 @@
     "email": "me@svenlito.com"
   },
   "devDependencies": {
-    "jasmine-node": "~1.9.1"
+    "jasmine-node": "~1.9.1",
+    "shelljs": "~0.1.4"
   }
 }
