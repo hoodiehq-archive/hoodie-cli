@@ -20,11 +20,17 @@
     "type": "git",
     "url": "https://github.com/hoodiehq/hoodie-cli.git"
   },
+  "scripts": {
+    "test": "node node_modules/jasmine-node/bin/jasmine-node --color --verbose spec"
+  },
   "bin": {
     "hoodie": "./bin/hoodie.js"
   },
   "author": {
     "name": "Sven Lito",
     "email": "me@svenlito.com"
+  },
+  "devDependencies": {
+    "jasmine-node": "~1.9.1"
   }
 }
