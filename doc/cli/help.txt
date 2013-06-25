@@ -1,0 +1,19 @@
+Usage: $0 <command> <parameters>
+
+Description:
+
+  Hoodie command-line tool.
+
+Commands:
+
+  new <appname> [<template]        create a hoodie project
+  start                            start hoodie app
+  module install <name>            ''
+  module uninstall <name>          ''
+  version                          output version number
+
+Options:
+
+  -v, --version        output version number
+  -h, --help           output usage information
+

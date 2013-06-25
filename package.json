@@ -1,17 +1,30 @@
 {
   "name": "hoodie-cli",
-  "version": "0.1.3",
+  "description": "Hoodie command-line interface.",
+  "version": "0.2.0",
   "preferGlobal": true,
   "dependencies": {
-    "commander": "1.1.x",
+    "colors": "0.6.x",
+    "optimist": "0.3.x",
     "which": "1.0.x",
-    "cli-color": "~0.2.2"
+    "cli-color": "~0.2.2",
+    "prompt": "~0.2.9"
   },
+  "keywords": [
+    "cli",
+    "hoodie",
+    "hood.io",
+    "hoodie.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/hoodiehq/hoodie-cli.git"
   },
   "bin": {
     "hoodie": "./bin/hoodie.js"
+  },
+  "author": {
+    "name": "Sven Lito",
+    "email": "me@svenlito.com"
   }
 }
