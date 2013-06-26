@@ -1,0 +1,15 @@
+Usage: $0 uninstall <module>
+
+Description:
+
+  Uninstalls a hoodie module
+
+Options:
+
+  --module, -m <module>       module name
+
+Examples:
+
+  $ $0 uninstall
+  $ $0 uninstall "users"
+  $ $0 uninstall -m  "users"

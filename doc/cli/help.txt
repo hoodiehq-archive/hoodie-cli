@@ -8,8 +8,8 @@ Commands:
 
   new <appname> [<template]        create a hoodie project
   start                            start hoodie app
-  module install <name>            ''
-  module uninstall <name>          ''
+  install <module>                 install hoodie module
+  uninstall <module>               uninstall hoodie module
   version                          output version number
 
 Options:
