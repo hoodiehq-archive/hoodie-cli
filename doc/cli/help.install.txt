@@ -1,0 +1,15 @@
+Usage: $0 install <module>
+
+Description:
+
+  Installs a hoodie module
+
+Options:
+
+  --module, -m <module>       module name
+
+Examples:
+
+  $ $0 install
+  $ $0 install "users"
+  $ $0 install -m  "users"
