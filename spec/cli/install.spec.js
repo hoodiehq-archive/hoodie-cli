@@ -27,14 +27,14 @@ describe('hoodie install', function() {
   describe('$ hoodie install', function() {
     it('should output usage info', function() {
       cli.argv({ _: ['install'] });
-      expect(stdout.mostRecentCall.args[0]).toMatch(/usage: [\S]+ Install/i);
+      expect(stdout.mostRecentCall.args[0]).toMatch(/Usage:/i);
     });
   });
 
   describe('$ hoodie install --help', function() {
     it('should output usage info', function() {
       cli.argv({ _: ['install'], help: true });
-      expect(stdout.mostRecentCall.args[0]).toMatch(/usage: [\S]+ Install/i);
+      expect(stdout.mostRecentCall.args[0]).toMatch(/\nUsage:/i);
     });
   });
 
