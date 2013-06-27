@@ -6,7 +6,7 @@ var Hoodie = require('../../lib/hoodie'),
  * Specification: hoodie.create(options, [callback])
  */
 
-xdescribe('hoodie.new(options, [callback])', function() {
+describe('hoodie.new(options, [callback])', function() {
 
   'use strict';
 
@@ -20,13 +20,6 @@ xdescribe('hoodie.new(options, [callback])', function() {
       spyOn(hoodie, 'new');
     });
 
-    it('should require options', function() {
-      expect(function() {
-          options = undefined;
-          hoodie.new(options, function(e) {});
-      }).toThrow();
-    });
-
     it('should not require callback', function() {
       expect(function() {
         hoodie.new(options);
@@ -36,7 +29,7 @@ xdescribe('hoodie.new(options, [callback])', function() {
     describe('successfully created a project', function() {
 
       beforeEach(function() {
-        hoodie.new.andCallFake(function(name, template,callback) {
+        hoodie.new.andCallFake(function(options, callback) {
           callback(null);
         });
       });
@@ -48,21 +41,12 @@ xdescribe('hoodie.new(options, [callback])', function() {
         });
       });
 
-    it('should trigger callback with an error', function(done) {
-      hoodie.new(options, function(e) {
-        expect(e).toEqual(jasmine.any(Error));
-        done();
+      it('should trigger callback with an error', function(done) {
+        hoodie.new(options, function(e) {
+          expect(e).toEqual(null);
+          done();
+        });
       });
-    });
-
-    it('should trigger "error" event', function(done) {
-      hoodie.on('error', function(e) {
-        expect(e).toEqual(jasmine.any(Error));
-        done();
-      });
-      hoodie.new(options);
-    });
-
-  });
+   });
 
 });
