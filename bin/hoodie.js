@@ -40,7 +40,7 @@ program
         
         var giturl = "git://github.com/" + template + ".git";
         
-        exec("git", ["clone", giturl, appname], function(err) {
+        exec("git", ["clone", "--depth=1", giturl, appname], function(err) {
             
             if(err) {
                 console.log("Error cloning the git repository:");
