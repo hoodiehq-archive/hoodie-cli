@@ -50,7 +50,16 @@ program
             
             process.chdir(appname);
             
-            // Replace {{hoodie_appname}} in package.jsona nd www/index.html
+            // Remove .git files
+            exec("rm", ["-rf", ".git*"], function(err) {
+                if(err) {
+                    console.log("Error deleting .git files:");
+                    throw err;
+                    process.exit(1);
+                }  
+            });
+            
+            // Replace {{hoodie_appname}} in package.json and www/index.html
             [
                 "package.json",
                 "./www/index.html"
