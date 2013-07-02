@@ -3,45 +3,41 @@ var Hoodie = require('../../lib/hoodie'),
     options;
 
 /*
- * Specification: hoodie.new(options, [callback])
+ * Specification: hoodie.start(options, [callback])
  */
 
-describe('hoodie.new(options, [callback])', function() {
+describe('hoodie.start(options, [callback])', function() {
 
   'use strict';
 
     beforeEach(function() {
       hoodie = new Hoodie();
-      options = {
-        name: 'hoodieapp',
-        template: '50p/yo-dawg'
-      };
-      spyOn(hoodie, 'new');
+      spyOn(hoodie, 'start');
     });
 
     it('should not require callback', function() {
       expect(function() {
-        hoodie.new(options);
+        hoodie.start();
       }).not.toThrow();
     });
 
-    describe('successfully created a project', function() {
+    describe('successfully start a hoodie app', function() {
 
       beforeEach(function() {
-        hoodie.new.andCallFake(function(options, callback) {
+        hoodie.start.andCallFake(function(callback) {
           callback(null);
         });
       });
 
       it('should trigger called without an error', function(done) {
-        hoodie.new(options, function(e) {
+        hoodie.start(function(e) {
           expect(e).toBeNull();
           done();
         });
       });
 
       it('should trigger callback with an error', function(done) {
-        hoodie.new(options, function(e) {
+        hoodie.start(function(e) {
           expect(e).toEqual(null);
           done();
         });
