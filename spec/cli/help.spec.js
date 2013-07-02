@@ -14,13 +14,6 @@ describe('hoodie help', function() {
     spyOn(process.stdout, 'write');
   });
 
-  describe('$ hoodie', function() {
-    it('should output the usage information', function() {
-      cli.argv({ _: [] });
-      expect(process.stdout.write.mostRecentCall.args[0]).toMatch(/See/g);
-    });
-  });
-
   describe('$ hoodie help', function() {
     it('should output the usage information', function() {
       cli.argv({ _: [ 'help' ] });
