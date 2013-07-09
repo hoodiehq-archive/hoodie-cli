@@ -7,14 +7,8 @@
   "jquery": true,
   "devel": true,
   "predef": [
-    "casper",
-    "Backbone",
     "_",
-    "sinon",
-    "Handlebars",
     "app",
-    "define",
-    "require",
     "jasmine",
     "spyOn",
     "afterEach",
@@ -29,8 +23,7 @@
     "before",
     "after",
     "xit",
-    "xdescribe",
-    "app"
+    "xdescribe"
   ],
   "debug": false,
   "devel": false,
