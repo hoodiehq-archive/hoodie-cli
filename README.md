@@ -1,5 +1,8 @@
+
 Hoodie command line utility
 ======
+
+[![Build Status](https://travis-ci.org/hoodiehq/hoodie-cli.png)](https://travis-ci.org/hoodiehq/hoodie-cli)
 
 The [hoodie](http://hood.ie) cli.
 
