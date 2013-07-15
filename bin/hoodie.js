@@ -69,7 +69,8 @@ program
                     throw err;
                     process.exit(1);
                 }
-                
+
+                console.log(program.helpInformation());
                 console.log([
                     "Installed all dependencies",
                     "Now start our new hoodie app:",
@@ -178,6 +179,5 @@ if(program.args.length === 0) {
             brown(line[4]) +
             red(line[5]));
     })
-
-    console.log("\n\t See 'hoodie --help' for more information.");
+    console.log(program.helpInformation());
 }
