@@ -18,7 +18,7 @@ npm install -g hoodie-cli
 See `hoodie -h` for information.
 
 ```
-hoodie new "appname" [<template>]
+hoodie new <appname> [<template>]
 ```
 Creates a new hoodie app inside a new folder called `appname`. `appname` will also be your domain. If template is not set it will use the default repository `hoodiehq/my-first-hoodie`.
 Sometimes the process stops at `npm WARN package.json hoodie-worker-email-out@0.3.4 No README.md file found!`. But don't mind and quit the process, all dependencies are installed, that's just a wired npm bug.
