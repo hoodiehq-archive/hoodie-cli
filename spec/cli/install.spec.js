@@ -42,10 +42,10 @@ describe('hoodie install', function() {
 
 
 /*
- * Specification: $ hoodie install <module>
+ * Specification: $ hoodie install <plugin>
  */
 
-describe('hoodie install <module>', function() {
+describe('hoodie install <plugin>', function() {
 
   'use strict';
 
@@ -56,30 +56,30 @@ describe('hoodie install <module>', function() {
   });
 
   describe('$ hoodie install "users"', function() {
-    it('should try to install a module', function() {
+    it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-          module: 'users'
+          plugin: 'users'
       },
       jasmine.any(Function));
     });
   });
 
   describe('$ hoodie install users', function() {
-    it('should try to install a module', function() {
+    it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-          module: 'users',
+          plugin: 'users',
       },
       jasmine.any(Function));
     });
   });
 
-  describe('$ hoodie install --module users', function() {
-    it('should try to install a module', function() {
+  describe('$ hoodie install --plugin users', function() {
+    it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-          module: 'users',
+          plugin: 'users',
       },
       jasmine.any(Function));
     });

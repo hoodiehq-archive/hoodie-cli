@@ -13,7 +13,7 @@ describe('hoodie.install(options, [callback])', function() {
     beforeEach(function() {
       hoodie = new Hoodie();
       options = {
-        module: 'hoodieapp'
+        plugin: 'hoodieapp'
       };
       spyOn(hoodie, 'install');
     });
@@ -24,7 +24,7 @@ describe('hoodie.install(options, [callback])', function() {
       }).not.toThrow();
     });
 
-    describe('successfully install a module', function() {
+    describe('successfully install a plugin', function() {
 
       beforeEach(function() {
         hoodie.install.andCallFake(function(options, callback) {
