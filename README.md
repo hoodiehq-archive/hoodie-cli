@@ -29,10 +29,10 @@ hoodie start
 Starts the hoodie app. The same as `npm start`.
 
 ```
-hoodie install <module>
-hoodie uninstall <module>
+hoodie install <plugin>
+hoodie uninstall <plugin>
 ```
-Un-/Installs a hoodie dependency via `npm`. Modules are installed from the [hoodie github account](http://github.com/hoodiehq) with a `worker-` prefix, e.g.:
+Un-/Installs a hoodie dependency via `npm`. Plugins are installed from the [hoodie github account](http://github.com/hoodiehq) with a `worker-` prefix, e.g.:
 ```
 hoodie install email-in
 # Cloned from https://github.com/hoodiehq/worker-email-in
