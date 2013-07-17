@@ -1,0 +1,16 @@
+Usage: $0 new <name> [<template>]
+
+Description:
+
+  Creates a new application at the provided path.
+
+Options:
+
+  --name, -n <name>           application name
+  --template, -t <template>   template name (default: "hoodiehq/my-first-hoodie")
+
+Examples:
+
+  $ $0 new
+  $ $0 new "hoodieapp"
+  $ $0 new -n "hoodieapp" -t "50p/my-fresh-hoodie-yo"

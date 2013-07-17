@@ -1,0 +1,15 @@
+Usage: $0 start
+
+Description:
+
+  Starts newly created hoodie app
+
+Options:
+
+  --browser, -b <boolean>     whether to open browser upon hoodie start
+
+Examples:
+
+  $ $0 start
+  $ $0 start browser
+  $ $0 start -b false
