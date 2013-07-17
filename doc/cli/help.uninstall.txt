@@ -1,12 +1,12 @@
-Usage: $0 uninstall <module>
+Usage: $0 uninstall <plugin>
 
 Description:
 
-  Uninstalls a hoodie module
+  Uninstalls a hoodie plugin
 
 Options:
 
-  --module, -m <module>       module name
+  --plugin, -m <plugin>       plugin name
 
 Examples:
 

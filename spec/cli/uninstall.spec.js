@@ -42,10 +42,10 @@ describe('hoodie uninstall', function() {
 
 
 /*
- * Specification: $ hoodie uninstall <module>
+ * Specification: $ hoodie uninstall <plugin>
  */
 
-describe('hoodie uninstall <module>', function() {
+describe('hoodie uninstall <plugin>', function() {
 
   'use strict';
 
@@ -56,30 +56,30 @@ describe('hoodie uninstall <module>', function() {
   });
 
   describe('$ hoodie uninstall "users"', function() {
-    it('should try to uninstall a module', function() {
+    it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
       expect(hoodie.uninstall).toHaveBeenCalledWith({
-          module: 'users'
+          plugin: 'users'
       },
       jasmine.any(Function));
     });
   });
 
   describe('$ hoodie uninstall users', function() {
-    it('should try to uninstall a module', function() {
+    it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
       expect(hoodie.uninstall).toHaveBeenCalledWith({
-          module: 'users',
+          plugin: 'users',
       },
       jasmine.any(Function));
     });
   });
 
-  describe('$ hoodie uninstall --module users', function() {
-    it('should try to uninstall a module', function() {
+  describe('$ hoodie uninstall --plugin users', function() {
+    it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
       expect(hoodie.uninstall).toHaveBeenCalledWith({
-          module: 'users',
+          plugin: 'users',
       },
       jasmine.any(Function));
     });

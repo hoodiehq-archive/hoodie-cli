@@ -13,7 +13,7 @@ describe('hoodie.uninstall(options, [callback])', function() {
     beforeEach(function() {
       hoodie = new Hoodie();
       options = {
-        module: 'hoodieapp'
+        plugin: 'hoodieapp'
       };
       spyOn(hoodie, 'uninstall');
     });
@@ -24,7 +24,7 @@ describe('hoodie.uninstall(options, [callback])', function() {
       }).not.toThrow();
     });
 
-    describe('successfully uninstall a module', function() {
+    describe('successfully uninstall a plugin', function() {
 
       beforeEach(function() {
         hoodie.uninstall.andCallFake(function(options, callback) {
