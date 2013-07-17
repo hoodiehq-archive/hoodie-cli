@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+var CLI = require('../lib/cli'),
+    argv = require('optimist').argv;
+
+new CLI().argv(argv);

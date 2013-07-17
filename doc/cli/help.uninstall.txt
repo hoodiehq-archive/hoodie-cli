@@ -1,0 +1,15 @@
+Usage: $0 uninstall <plugin>
+
+Description:
+
+  Uninstalls a hoodie plugin
+
+Options:
+
+  --plugin, -m <plugin>       plugin name
+
+Examples:
+
+  $ $0 uninstall
+  $ $0 uninstall "users"
+  $ $0 uninstall -m  "users"

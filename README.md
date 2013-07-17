@@ -1,5 +1,8 @@
+
 Hoodie command line utility
 ======
+
+[![Build Status](https://travis-ci.org/hoodiehq/hoodie-cli.png)](https://travis-ci.org/hoodiehq/hoodie-cli)
 
 The [hoodie](http://hood.ie) cli.
 
@@ -26,8 +29,8 @@ hoodie start
 Starts the hoodie app. The same as `npm start`.
 
 ```
-hoodie install <name>
-hoodie uninstall <name>
+hoodie install <module>
+hoodie uninstall <module>
 ```
 Un-/Installs a hoodie dependency via `npm`. Modules are installed from the [hoodie github account](http://github.com/hoodiehq) with a `worker-` prefix, e.g.:
 ```
