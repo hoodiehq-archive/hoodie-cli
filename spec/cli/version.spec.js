@@ -8,13 +8,11 @@ var hoodie = require('../../lib/main'),
 
 describe('hoodie --version', function() {
 
-  'use strict';
-
   beforeEach(function() {
     cli = new CLI();
     spyOn(process.stdout, 'write');
     spyOn(hoodie, 'version').andReturn({
-        hoodie: '2.8.0'
+      hoodie: '2.8.0'
     });
   });
 

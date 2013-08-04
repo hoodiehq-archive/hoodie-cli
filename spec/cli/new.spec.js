@@ -9,8 +9,6 @@ var hoodie = require('../../lib/main'),
 
 describe('hoodie help new', function() {
 
-  'use strict';
-
   beforeEach(function() {
     cli = new CLI();
     spyOn(process.stdout, 'write');
@@ -54,8 +52,6 @@ describe('hoodie help new', function() {
 
 describe('hoodie new <name>', function() {
 
-  'use strict';
-
   beforeEach(function() {
     cli = new CLI();
     spyOn(process.stdout, 'write');
@@ -66,8 +62,8 @@ describe('hoodie new <name>', function() {
     it('should try to create the app', function() {
       cli.argv({ _: ['new', 'appname'] });
       expect(hoodie.new).toHaveBeenCalledWith({
-          name: 'appname',
-          template: undefined
+        name: 'appname',
+        template: undefined
       },
       jasmine.any(Function));
     });
@@ -77,8 +73,8 @@ describe('hoodie new <name>', function() {
     it('should try to create the project', function() {
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
       expect(hoodie.new).toHaveBeenCalledWith({
-          name: 'appname',
-          template: '50p/massive-hoodie-yo'
+        name: 'appname',
+        template: '50p/massive-hoodie-yo'
       },
       jasmine.any(Function));
     });
@@ -88,8 +84,8 @@ describe('hoodie new <name>', function() {
     it('should try to create the project', function() {
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
       expect(hoodie.new).toHaveBeenCalledWith({
-          name: 'appname',
-          template: '50p/massive-hoodie-yo'
+        name: 'appname',
+        template: '50p/massive-hoodie-yo'
       },
       jasmine.any(Function));
     });
@@ -99,8 +95,8 @@ describe('hoodie new <name>', function() {
     it('should try to create the project', function() {
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
       expect(hoodie.new).toHaveBeenCalledWith({
-          name: 'appname',
-          template: '50p/massive-hoodie-yo'
+        name: 'appname',
+        template: '50p/massive-hoodie-yo'
       },
       jasmine.any(Function));
     });

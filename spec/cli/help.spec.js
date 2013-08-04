@@ -7,8 +7,6 @@ var CLI = require('../../lib/cli'),
 
 describe('hoodie help', function() {
 
-  'use strict';
-
   beforeEach(function() {
     cli = new CLI();
     spyOn(process.stdout, 'write');

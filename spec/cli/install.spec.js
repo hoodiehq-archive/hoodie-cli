@@ -9,8 +9,6 @@ var hoodie = require('../../lib/main'),
 
 describe('hoodie install', function() {
 
-  'use strict';
-
   beforeEach(function() {
     cli = new CLI();
     spyOn(process.stdout, 'write');
@@ -47,8 +45,6 @@ describe('hoodie install', function() {
 
 describe('hoodie install <plugin>', function() {
 
-  'use strict';
-
   beforeEach(function() {
     cli = new CLI();
     spyOn(process.stdout, 'write');
@@ -59,7 +55,7 @@ describe('hoodie install <plugin>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-          plugin: 'users'
+        plugin: 'users'
       },
       jasmine.any(Function));
     });
@@ -69,7 +65,7 @@ describe('hoodie install <plugin>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-          plugin: 'users',
+        plugin: 'users'
       },
       jasmine.any(Function));
     });
@@ -79,7 +75,7 @@ describe('hoodie install <plugin>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-          plugin: 'users',
+        plugin: 'users'
       },
       jasmine.any(Function));
     });

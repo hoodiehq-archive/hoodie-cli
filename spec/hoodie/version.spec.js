@@ -1,5 +1,4 @@
 var hoodie = require('../../lib/hoodie'),
-    fs = require('fs'),
     hoodie;
 
 /*
@@ -7,8 +6,6 @@ var hoodie = require('../../lib/hoodie'),
  */
 
 describe('hoodie.version()', function() {
-
-  'use strict';
 
   beforeEach(function() {
     hoodie = new hoodie();
