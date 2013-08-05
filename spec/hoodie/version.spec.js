@@ -12,7 +12,7 @@ describe('hoodie.version()', function() {
   });
 
   it('should return a version string', function() {
-    expect(hoodie.version()).toEqual(jasmine.any(String));
+    expect(hoodie.version).toBeDefined();
   });
 
 });

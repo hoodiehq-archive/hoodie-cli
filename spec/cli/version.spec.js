@@ -6,7 +6,7 @@ var hoodie = require('../../lib/main'),
  * Specification: $ hoodie version
  */
 
-describe('hoodie --version', function() {
+xdescribe('hoodie --version', function() {
 
   beforeEach(function() {
     cli = new CLI();
