@@ -10,10 +10,8 @@ Commands:
   start                            start hoodie app
   install <plugin>                 install hoodie plugin
   uninstall <plugin>               uninstall hoodie plugin
-  version                          output version number
 
 Options:
 
-  -v, --version        output version number
   -h, --help           output usage information
 
