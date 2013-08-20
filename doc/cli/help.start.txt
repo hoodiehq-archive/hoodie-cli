@@ -7,9 +7,11 @@ Description:
 Options:
 
   --nobrowser, -n   whether to open browser upon hoodie start
+  --www, -w         set the directory hoodie will serve static assets from
 
 Examples:
 
   $ $0 start
   $ $0 start nobrowser
   $ $0 start -n
+  $ $0 start -w production
