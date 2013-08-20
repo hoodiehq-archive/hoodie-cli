@@ -1,15 +1,16 @@
-Usage: $0 uninstall <plugin>
+Usage: $0 uninstall <plugin(s)>
 
 Description:
 
-  Uninstalls a hoodie plugin
+  Uninstalls hoodie plugin(s)
 
 Options:
 
-  --plugin, -m <plugin>       plugin name
+  --plugins, -p <plugin>       single plugin name or comma separated list
 
 Examples:
 
   $ $0 uninstall
-  $ $0 uninstall "users"
-  $ $0 uninstall -m  "users"
+  $ $0 uninstall users
+  $ $0 uninstall -p  users
+  $ $0 uninstall -p  users,shares,cheesecake

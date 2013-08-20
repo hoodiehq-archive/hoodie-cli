@@ -8,8 +8,8 @@ Commands:
 
   new <appname> [<template]        create a hoodie project
   start                            start hoodie app
-  install <plugin>                 install hoodie plugin
-  uninstall <plugin>               uninstall hoodie plugin
+  install <plugin(s)>              install hoodie plugin
+  uninstall <plugin(s)>            uninstall hoodie plugin
 
 Options:
 

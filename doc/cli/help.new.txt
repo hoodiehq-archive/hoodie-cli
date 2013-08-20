@@ -8,9 +8,11 @@ Options:
 
   --name, -n <name>           application name
   --template, -t <template>   template name (default: "hoodiehq/my-first-hoodie")
+  --plugins, -p <plugin(s)>   installs hoodie plugin(s)
 
 Examples:
 
   $ $0 new
-  $ $0 new "hoodieapp"
-  $ $0 new -n "hoodieapp" -t "50p/my-fresh-hoodie-yo"
+  $ $0 new hoodieapp
+  $ $0 new -n hoodieapp -t 50p/my-fresh-hoodie-yo
+  $ $0 new -n hoodieapp -t 50p/my-fresh-hoodie-yo -p users, shares, cheesecake

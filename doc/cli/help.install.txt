@@ -1,15 +1,16 @@
-Usage: $0 install <plugin>
+Usage: $0 install <plugin(s)>
 
 Description:
 
-  Installs a hoodie plugin
+  Installs hoodie plugin(s)
 
 Options:
 
-  --plugin, -m <plugin>       plugin name
+  --plugins, -p <plugins>       single plugin name or comma separated list
 
 Examples:
 
   $ $0 install
-  $ $0 install "users"
-  $ $0 install -p "users"
+  $ $0 install users
+  $ $0 install -p users
+  $ $0 install -p users,shares,cheesecake

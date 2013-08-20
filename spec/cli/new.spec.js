@@ -102,4 +102,28 @@ describe('hoodie new <name>', function() {
     });
   });
 
+  describe('$ hoodie new -name appname --template 50p/massive-hoodie-yo --plugins users', function() {
+    it('should try to create the project', function() {
+      cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users'] });
+      expect(hoodie.new).toHaveBeenCalledWith({
+        name: 'appname',
+        template: '50p/massive-hoodie-yo',
+        plugins: 'users'
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie new -name appname --template 50p/massive-hoodie-yo --plugins users,shares', function() {
+    it('should try to create the project', function() {
+      cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users,shares'] });
+      expect(hoodie.new).toHaveBeenCalledWith({
+        name: 'appname',
+        template: '50p/massive-hoodie-yo',
+        plugins: 'users,shares'
+      },
+      jasmine.any(Function));
+    });
+  });
+
 });

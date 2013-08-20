@@ -40,10 +40,10 @@ describe('hoodie uninstall', function() {
 
 
 /*
- * Specification: $ hoodie uninstall <plugin>
+ * Specification: $ hoodie uninstall <plugins>
  */
 
-describe('hoodie uninstall <plugin>', function() {
+describe('hoodie uninstall <plugins>', function() {
 
   beforeEach(function() {
     cli = new CLI();
@@ -51,11 +51,11 @@ describe('hoodie uninstall <plugin>', function() {
     spyOn(hoodie, 'uninstall');
   });
 
-  describe('$ hoodie uninstall "users"', function() {
+  describe('$ hoodie uninstall users', function() {
     it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
       expect(hoodie.uninstall).toHaveBeenCalledWith({
-        plugin: 'users'
+        plugins: 'users'
       },
       jasmine.any(Function));
     });
@@ -65,17 +65,47 @@ describe('hoodie uninstall <plugin>', function() {
     it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
       expect(hoodie.uninstall).toHaveBeenCalledWith({
-        plugin: 'users',
+        plugins: 'users',
       },
       jasmine.any(Function));
     });
   });
 
-  describe('$ hoodie uninstall --plugin users', function() {
+  describe('$ hoodie uninstall --plugins users', function() {
     it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
       expect(hoodie.uninstall).toHaveBeenCalledWith({
-        plugin: 'users',
+        plugins: 'users',
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie uninstall --plugins users,shares', function() {
+    it('should try to uninstall a plugin', function() {
+      cli.argv({ _: ['uninstall', 'users,shares'] });
+      expect(hoodie.uninstall).toHaveBeenCalledWith({
+        plugins: 'users,shares',
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie uninstall --p users,shares', function() {
+    it('should try to uninstall a plugin', function() {
+      cli.argv({ _: ['uninstall', 'users,shares'] });
+      expect(hoodie.uninstall).toHaveBeenCalledWith({
+        plugins: 'users,shares',
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie uninstall --p users', function() {
+    it('should try to uninstall a plugin', function() {
+      cli.argv({ _: ['uninstall', 'users'] });
+      expect(hoodie.uninstall).toHaveBeenCalledWith({
+        plugins: 'users',
       },
       jasmine.any(Function));
     });

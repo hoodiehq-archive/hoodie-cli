@@ -40,10 +40,10 @@ describe('hoodie install', function() {
 
 
 /*
- * Specification: $ hoodie install <plugin>
+ * Specification: $ hoodie install <plugins>
  */
 
-describe('hoodie install <plugin>', function() {
+describe('hoodie install <plugins>', function() {
 
   beforeEach(function() {
     cli = new CLI();
@@ -52,10 +52,10 @@ describe('hoodie install <plugin>', function() {
   });
 
   describe('$ hoodie install "users"', function() {
-    it('should try to install a plugin', function() {
+    it('should try to install a plugins', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-        plugin: 'users'
+        plugins: 'users'
       },
       jasmine.any(Function));
     });
@@ -65,7 +65,7 @@ describe('hoodie install <plugin>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-        plugin: 'users'
+        plugins: 'users'
       },
       jasmine.any(Function));
     });
@@ -75,7 +75,37 @@ describe('hoodie install <plugin>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install).toHaveBeenCalledWith({
-        plugin: 'users'
+        plugins: 'users'
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie install --plugin users,shares', function() {
+    it('should try to install a plugin', function() {
+      cli.argv({ _: ['install', 'users,shares'] });
+      expect(hoodie.install).toHaveBeenCalledWith({
+        plugins: 'users,shares'
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie install -p users', function() {
+    it('should try to install a plugin', function() {
+      cli.argv({ _: ['install', 'users'] });
+      expect(hoodie.install).toHaveBeenCalledWith({
+        plugins: 'users'
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie install -p users,shares', function() {
+    it('should try to install a plugin', function() {
+      cli.argv({ _: ['install', 'users,shares'] });
+      expect(hoodie.install).toHaveBeenCalledWith({
+        plugins: 'users,shares'
       },
       jasmine.any(Function));
     });
