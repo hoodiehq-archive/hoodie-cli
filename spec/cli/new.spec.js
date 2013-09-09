@@ -91,6 +91,17 @@ describe('hoodie new <name>', function() {
     });
   });
 
+  describe('$ hoodie new -name appname --template 50p/massive-hoodie-yo#zipper', function() {
+    it('should try to create the project', function() {
+      cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo#zipper'] });
+      expect(hoodie.new).toHaveBeenCalledWith({
+        name: 'appname',
+        template: '50p/massive-hoodie-yo#zipper'
+      },
+      jasmine.any(Function));
+    });
+  });
+
   describe('$ hoodie new -name appname --template 50p/massive-hoodie-yo', function() {
     it('should try to create the project', function() {
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
