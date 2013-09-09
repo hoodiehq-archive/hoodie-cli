@@ -6,7 +6,7 @@ Description:
 
 Commands:
 
-  new <appname> [<template]        create a hoodie project
+  new <appname> [<template>]       create a hoodie project
   start                            start hoodie app
   install <plugin(s)>              install hoodie plugin
   uninstall <plugin(s)>            uninstall hoodie plugin
