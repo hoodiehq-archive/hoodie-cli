@@ -15,4 +15,4 @@ Examples:
   $ $0 new
   $ $0 new hoodieapp
   $ $0 new -n hoodieapp -t "50p/my-fresh-hoodie-yo"
-  $ $0 new -n hoodieapp -t "50p/my-fresh-hoodie-yo" -p users, shares, cheesecake
+  $ $0 new -n hoodieapp -t "50p/my-fresh-hoodie-yo" -p "users,shares,cheesecake"

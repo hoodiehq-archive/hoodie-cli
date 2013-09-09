@@ -14,4 +14,4 @@ Examples:
   $ $0 start
   $ $0 start nobrowser
   $ $0 start -n
-  $ $0 start -w production
+  $ $0 start -w "production"
