@@ -12,5 +12,5 @@ Examples:
 
   $ $0 uninstall
   $ $0 uninstall users
-  $ $0 uninstall -p  users
-  $ $0 uninstall -p  users,shares,cheesecake
+  $ $0 uninstall -p  "users"
+  $ $0 uninstall -p  "users,shares,cheesecake"

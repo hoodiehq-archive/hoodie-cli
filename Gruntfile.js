@@ -22,7 +22,7 @@ module.exports = function (grunt) {
     },
 
     watch: {
-      files: ['<config:jshint.files>'],
+      files: ['<%= jshint.files %>'],
       tasks: 'jshint'
     }
 

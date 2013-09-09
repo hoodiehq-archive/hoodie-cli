@@ -22,13 +22,6 @@ describe('hoodie help new', function() {
     });
   });
 
-  describe('$ hoodie new', function() {
-    it('should output usage info', function() {
-      cli.argv({ _: ['new'] });
-      expect(stdout.mostRecentCall.args[0]).toMatch(/\nUsage:/i);
-    });
-  });
-
   describe('$ hoodie new --help', function() {
     it('should output usage info', function() {
       cli.argv({ _: ['new'], help: true });
@@ -86,6 +79,17 @@ describe('hoodie new <name>', function() {
       expect(hoodie.new).toHaveBeenCalledWith({
         name: 'appname',
         template: '50p/massive-hoodie-yo'
+      },
+      jasmine.any(Function));
+    });
+  });
+
+  describe('$ hoodie new -name appname --template 50p/massive-hoodie-yo#zipper', function() {
+    it('should try to create the project', function() {
+      cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo#zipper'] });
+      expect(hoodie.new).toHaveBeenCalledWith({
+        name: 'appname',
+        template: '50p/massive-hoodie-yo#zipper'
       },
       jasmine.any(Function));
     });

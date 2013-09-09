@@ -38,6 +38,15 @@ describe('hoodie.new(options, [callback])', function() {
       });
     });
 
+    it('should trigger called without an error', function(done) {
+      options.template = '50/yo-dawg#some-test';
+
+      hoodie.new(options, function(e) {
+        expect(e).toBeNull();
+        done();
+      });
+    });
+
     it('should trigger callback with an error', function(done) {
       hoodie.new(options, function(e) {
         expect(e).toEqual(null);
