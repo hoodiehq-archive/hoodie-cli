@@ -22,13 +22,6 @@ describe('hoodie help new', function() {
     });
   });
 
-  describe('$ hoodie new', function() {
-    it('should output usage info', function() {
-      cli.argv({ _: ['new'] });
-      expect(stdout.mostRecentCall.args[0]).toMatch(/\nUsage:/i);
-    });
-  });
-
   describe('$ hoodie new --help', function() {
     it('should output usage info', function() {
       cli.argv({ _: ['new'], help: true });
