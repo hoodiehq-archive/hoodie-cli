@@ -1,6 +1,6 @@
-var Hoodie = require('../../lib/hoodie'),
-    hoodie,
-    options;
+var Hoodie = require('../../lib/hoodie');
+var hoodie;
+var options;
 
 /*
  * Specification: hoodie.new(options, [callback])
