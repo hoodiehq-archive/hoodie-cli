@@ -21,19 +21,17 @@ describe('hoodie.start(options, [callback])', function() {
     }).not.to.throwException();
   });
 
-  xdescribe('successfully start a hoodie app', function() {
+  describe('successfully start a hoodie app', function() {
 
-    it('should trigger called without an error', function(done) {
+    it('should trigger called without an error', function() {
       hoodie.start(function(e) {
         expect(e).to.be(null);
-        done();
       });
     });
 
-    it('should trigger callback with an error', function(done) {
+    it('should trigger callback with an error', function() {
       hoodie.start(function(e) {
         expect(e).to.eql(null);
-        done();
       });
     });
   });

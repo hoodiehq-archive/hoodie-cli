@@ -23,7 +23,7 @@ describe('hoodie.install(options, [callback])', function() {
     }).to.not.throwException();
   });
 
-  xdescribe('successfully install a plugin', function() {
+  describe('successfully install a plugin', function() {
 
     beforeEach(function() {
       this.sandbox.stub(hoodie, 'install').returns(function(options, callback) {
@@ -31,19 +31,18 @@ describe('hoodie.install(options, [callback])', function() {
       });
     });
 
-    it('should trigger called without an error', function(done) {
+    it('should trigger called without an error', function() {
       hoodie.install(options, function(e) {
         expect(e).to.eql(null);
-        done();
       });
     });
 
-    it('should trigger callback with an error', function(done) {
+    it('should trigger callback with an error', function() {
       hoodie.install(options, function(e) {
         expect(e).to.eql(null);
-        done();
       });
     });
+
   });
 
 });

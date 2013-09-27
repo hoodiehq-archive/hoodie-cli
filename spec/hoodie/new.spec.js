@@ -27,28 +27,25 @@ describe('hoodie.new(options, [callback])', function() {
     }).to.not.throwException();
   });
 
-  xdescribe('successfully created a project', function() {
+  describe('successfully created a project', function() {
 
-    it('should trigger called without an error', function(done) {
+    it('should trigger called without an error', function() {
       hoodie.new(options, function(e) {
         expect(e).to.be(null);
-        done();
       });
     });
 
-    it('should trigger called without an error', function(done) {
+    it('should trigger called without an error', function() {
       options.template = '50/yo-dawg#some-test';
 
       hoodie.new(options, function(e) {
         expect(e).to.be(null);
-        done();
       });
     });
 
-    it('should trigger callback with an error', function(done) {
+    it('should trigger callback with an error', function() {
       hoodie.new(options, function(e) {
         expect(e).to.be(null);
-        done();
       });
     });
 

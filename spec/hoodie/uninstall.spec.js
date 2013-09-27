@@ -24,25 +24,23 @@ describe('hoodie.uninstall(options, [callback])', function() {
     }).to.not.throwException();
   });
 
-  xdescribe('successfully uninstall a plugin', function() {
+  describe('successfully uninstall a plugin', function() {
 
     beforeEach(function() {
-      hoodie.uninstall.andCallFake(function(options, callback) {
+      hoodie.uninstall(function(options, callback) {
         callback(null);
       });
     });
 
-    it('should trigger called without an error', function(done) {
+    it('should trigger called without an error', function() {
       hoodie.uninstall(options, function(e) {
         expect(e).to.be(null);
-        done();
       });
     });
 
-    it('should trigger callback with an error', function(done) {
+    it('should trigger callback with an error', function() {
       hoodie.uninstall(options, function(e) {
         expect(e).to.eql(null);
-        done();
       });
     });
   });
