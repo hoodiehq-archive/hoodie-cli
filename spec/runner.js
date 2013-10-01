@@ -4,6 +4,7 @@ require('./hoodie.spec');
 require('./cli/help.spec');
 require('./cli/install.spec');
 require('./cli/new.spec');
+require('./cli/start.spec');
 require('./cli/uninstall.spec');
 require('./cli/unknown.spec');
 require('./hoodie/install.spec');
