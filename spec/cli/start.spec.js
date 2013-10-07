@@ -73,6 +73,19 @@ describe('hoodie start', function() {
     });
   });
 
+  describe('$ hoodie start --allow-sudo', function() {
+    it('should try to start the app with --allow-sudo', function() {
+      var args = {
+        noBrowser: 'noBrowser',
+        www: undefined,
+        sudo: undefined
+      };
+      cli.argv({ _: ['start', 'noBrowser'], sudo: true });
+      expect(hoodie.start.args[0][0]).to.eql(args);
+      expect(hoodie.start.args[0][1]).to.be.a('function');
+    });
+  });
+
   describe('$ hoodie start noBrowser --www "production"', function() {
     it('should try to start the app with noBrowser and --www', function() {
       var args = {
