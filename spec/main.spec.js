@@ -1,5 +1,7 @@
-var Hoodie = require('../lib/hoodie'),
-    hoodie = require('../lib/main');
+var Hoodie = require('../lib/hoodie');
+var hoodie = require('../lib/main');
+
+var expect = require('expect.js');
 
 /*!
  * Specification: hoodie.
@@ -8,6 +10,6 @@ var Hoodie = require('../lib/hoodie'),
 describe('main', function() {
 
   it('should be an instance of Hoodie', function() {
-    expect(hoodie).toEqual(jasmine.any(Hoodie));
+    expect(hoodie).to.be.an(Hoodie);
   });
 });
