@@ -1,6 +1,8 @@
-var Hoodie = require('../../lib/hoodie'),
-    hoodie,
-    options;
+var Hoodie = require('../../lib/hoodie');
+var hoodie;
+var options;
+
+var expect = require('expect.js');
 
 /*
  * Specification: hoodie.uninstall(options, [callback])
@@ -13,34 +15,32 @@ describe('hoodie.uninstall(options, [callback])', function() {
     options = {
       plugin: 'hoodieapp'
     };
-    spyOn(hoodie, 'uninstall');
+    this.sandbox.spy(hoodie, 'uninstall');
   });
 
   it('should not require callback', function() {
     expect(function() {
       hoodie.uninstall(options);
-    }).not.toThrow();
+    }).to.not.throwException();
   });
 
   describe('successfully uninstall a plugin', function() {
 
     beforeEach(function() {
-      hoodie.uninstall.andCallFake(function(options, callback) {
+      hoodie.uninstall(function(options, callback) {
         callback(null);
       });
     });
 
-    it('should trigger called without an error', function(done) {
+    it('should trigger called without an error', function() {
       hoodie.uninstall(options, function(e) {
-        expect(e).toBeNull();
-        done();
+        expect(e).to.be(null);
       });
     });
 
-    it('should trigger callback with an error', function(done) {
+    it('should trigger callback with an error', function() {
       hoodie.uninstall(options, function(e) {
-        expect(e).toEqual(null);
-        done();
+        expect(e).to.eql(null);
       });
     });
   });
