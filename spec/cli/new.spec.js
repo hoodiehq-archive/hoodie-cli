@@ -67,6 +67,20 @@ describe('hoodie new <name>', function() {
     });
   });
 
+  describe('$ hoodie new "appname"', function() {
+    it('should try to create the app verbosely', function() {
+      var args = {
+        name: 'appname',
+        template: undefined,
+        plugins: undefined,
+        verbose: true
+      };
+      cli.argv({ _: ['new', 'appname'], verbose: true });
+      expect(hoodie.new.args[0][0]).to.eql(args);
+      expect(hoodie.new.args[0][1]).to.be.a('function');
+    });
+  });
+
   describe('$ hoodie new appname 50p/massive-hoodie-yo', function() {
     it('should try to create the project', function() {
       var args = {
