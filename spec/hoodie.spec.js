@@ -1,5 +1,7 @@
-var Hoodie = require('../lib/hoodie'),
-    hoodie = new Hoodie();
+var Hoodie = require('../lib/hoodie');
+var hoodie = new Hoodie();
+
+var expect = require('expect.js');
 
 /*!
  * Specification: hoodie.
@@ -7,6 +9,6 @@ var Hoodie = require('../lib/hoodie'),
 
 describe('hoodie', function() {
   it('should define hoodie.new', function() {
-    expect(hoodie.new).toEqual(jasmine.any(Function));
+    expect(hoodie).to.have.property('new');
   });
 });
