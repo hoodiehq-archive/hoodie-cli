@@ -13,7 +13,8 @@ describe('hoodie.install(options, [callback])', function() {
   beforeEach(function() {
     hoodie = new Hoodie();
     options = {
-      plugin: 'hoodieapp'
+      plugin: 'hoodieapp',
+      verbose: undefined
     };
   });
 

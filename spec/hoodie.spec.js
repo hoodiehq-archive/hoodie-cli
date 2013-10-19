@@ -9,10 +9,6 @@ var expect = require('expect.js');
 
 describe('hoodie', function() {
 
-  it('should define hoodie.help', function() {
-    expect(hoodie).to.have.property('help');
-  });
-
   it('should define hoodie.install', function() {
     expect(hoodie).to.have.property('install');
   });

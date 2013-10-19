@@ -45,7 +45,8 @@ describe('hoodie uninstall <plugins>', function() {
     this.sandbox.spy(process.stdout, 'write');
     this.sandbox.stub(hoodie, 'uninstall');
     this.args = {
-      plugins: 'users'
+      plugins: 'users',
+      verbose: undefined
     };
   });
 

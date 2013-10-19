@@ -50,7 +50,8 @@ describe('hoodie install <plugins>', function() {
     it('should try to install a plugins', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install.calledWith({
-        plugins: 'users'
+        plugins: 'users',
+        verbose: undefined
       })).to.be.ok();
     });
   });
@@ -59,7 +60,8 @@ describe('hoodie install <plugins>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install.calledWith({
-        plugins: 'users'
+        plugins: 'users',
+        verbose: undefined
       })).to.be.ok();
     });
   });
@@ -68,7 +70,8 @@ describe('hoodie install <plugins>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install.calledWith({
-        plugins: 'users'
+        plugins: 'users',
+        verbose: undefined
       })).to.be.ok();
     });
   });
@@ -77,7 +80,8 @@ describe('hoodie install <plugins>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users,shares'] });
       expect(hoodie.install.calledWith({
-        plugins: 'users,shares'
+        plugins: 'users,shares',
+        verbose: undefined
       })).to.be.ok();
     });
   });
@@ -86,7 +90,8 @@ describe('hoodie install <plugins>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
       expect(hoodie.install.calledWith({
-        plugins: 'users'
+        plugins: 'users',
+        verbose: undefined
       })).to.be.ok();
     });
   });
@@ -95,7 +100,8 @@ describe('hoodie install <plugins>', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users,shares'] });
       expect(hoodie.install.calledWith({
-        plugins: 'users,shares'
+        plugins: 'users,shares',
+        verbose: undefined
       })).to.be.ok();
     });
   });
