@@ -2,6 +2,7 @@ var hoodie = require('../../lib/main');
 var CLI = require('../../lib/cli');
 var cli;
 var stdout;
+var args;
 
 var expect = require('expect.js');
 
@@ -53,7 +54,7 @@ describe('hoodie uninstall <plugins>', function() {
   describe('$ hoodie uninstall users', function() {
     it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
-      expect(hoodie.uninstall.args[0][0]).to.eql(this.args);
+      expect(hoodie.uninstall.args[0][0]).to.eql(args);
       expect(hoodie.uninstall.args[0][1]).to.be.a('function');
     });
   });
@@ -61,7 +62,7 @@ describe('hoodie uninstall <plugins>', function() {
   describe('$ hoodie uninstall users', function() {
     it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
-      expect(hoodie.uninstall.args[0][0]).to.eql(this.args);
+      expect(hoodie.uninstall.args[0][0]).to.eql(args);
       expect(hoodie.uninstall.args[0][1]).to.be.a('function');
     });
   });
@@ -69,27 +70,27 @@ describe('hoodie uninstall <plugins>', function() {
   describe('$ hoodie uninstall --plugins users', function() {
     it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
-      expect(hoodie.uninstall.args[0][0]).to.eql(this.args);
+      expect(hoodie.uninstall.args[0][0]).to.eql(args);
       expect(hoodie.uninstall.args[0][1]).to.be.a('function');
     });
   });
 
   describe('$ hoodie uninstall --plugins users,shares', function() {
     it('should try to uninstall a plugin', function() {
-      this.args.plugins = 'users,shares';
+      args.plugins = 'users,shares';
 
       cli.argv({ _: ['uninstall', 'users,shares'] });
-      expect(hoodie.uninstall.args[0][0]).to.eql(this.args);
+      expect(hoodie.uninstall.args[0][0]).to.eql(args);
       expect(hoodie.uninstall.args[0][1]).to.be.a('function');
     });
   });
 
   describe('$ hoodie uninstall --p users,shares', function() {
     it('should try to uninstall a plugin', function() {
-      this.args.plugins = 'users,shares';
+      args.plugins = 'users,shares';
 
       cli.argv({ _: ['uninstall', 'users,shares'] });
-      expect(hoodie.uninstall.args[0][0]).to.eql(this.args);
+      expect(hoodie.uninstall.args[0][0]).to.eql(args);
       expect(hoodie.uninstall.args[0][1]).to.be.a('function');
     });
   });
@@ -97,7 +98,7 @@ describe('hoodie uninstall <plugins>', function() {
   describe('$ hoodie uninstall --p users', function() {
     it('should try to uninstall a plugin', function() {
       cli.argv({ _: ['uninstall', 'users'] });
-      expect(hoodie.uninstall.args[0][0]).to.eql(this.args);
+      expect(hoodie.uninstall.args[0][0]).to.eql(args);
       expect(hoodie.uninstall.args[0][1]).to.be.a('function');
     });
   });

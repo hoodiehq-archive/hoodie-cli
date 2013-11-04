@@ -1,7 +1,7 @@
 {
   "name": "hoodie-cli",
   "description": "Hoodie command-line interface.",
-  "version": "0.2.7",
+  "version": "0.3.2",
   "preferGlobal": true,
   "dependencies": {
     "colors": "0.6.x",
@@ -12,7 +12,10 @@
     "update-notifier": "~0.1.3",
     "open": "0.0.4",
     "npm": "~1.3.7",
-    "async": "0.2.9"
+    "async": "0.2.9",
+    "graceful-fs": "~2.0.1",
+    "underscore": "1.5.2",
+    "rimraf": "~2.2.2"
   },
   "keywords": [
     "cli",
