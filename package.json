@@ -15,7 +15,8 @@
     "async": "0.2.9",
     "graceful-fs": "~2.0.1",
     "underscore": "1.5.2",
-    "rimraf": "~2.2.2"
+    "rimraf": "~2.2.2",
+    "ini": "~1.1.0"
   },
   "keywords": [
     "cli",

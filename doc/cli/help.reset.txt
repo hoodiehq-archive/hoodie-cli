@@ -1,0 +1,9 @@
+Usage: $0 reset password
+
+Description:
+
+  Reset Hoodie Server password
+
+Examples:
+
+  $ $0 reset password
