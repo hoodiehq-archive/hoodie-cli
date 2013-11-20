@@ -38,7 +38,7 @@ describe('hoodie reset', function() {
  * Specification: $ hoodie reset password
  */
 
-describe('hoodie reset passwor', function() {
+describe('hoodie reset password', function() {
 
   beforeEach(function() {
     cli = new CLI();
