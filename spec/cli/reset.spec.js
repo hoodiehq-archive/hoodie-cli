@@ -33,26 +33,3 @@ describe('hoodie reset', function() {
 
 });
 
-
-/*
- * Specification: $ hoodie reset password
- */
-
-describe('hoodie reset password', function() {
-
-  beforeEach(function() {
-    cli = new CLI();
-    this.sandbox.spy(process.stdout, 'write');
-    this.sandbox.stub(hoodie, 'reset');
-  });
-
-  describe('$ hoodie reset password', function() {
-    it('should try to reset password', function() {
-      cli.argv({ _: ['reset', 'password'] });
-      expect(hoodie.reset.calledWith({
-        password: 'password'
-      })).to.be.ok();
-    });
-  });
-
-});
