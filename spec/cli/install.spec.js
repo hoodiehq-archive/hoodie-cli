@@ -47,7 +47,8 @@ describe('hoodie install <plugins>', function() {
     this.sandbox.stub(hoodie, 'install');
     args = {
       plugins: 'users',
-      verbose: undefined
+      verbose: undefined,
+      link: undefined
     };
   });
 
