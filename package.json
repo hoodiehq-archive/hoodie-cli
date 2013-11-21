@@ -16,6 +16,7 @@
     "graceful-fs": "~2.0.1",
     "underscore": "1.5.2",
     "rimraf": "~2.2.2",
+    "shelljs": "~0.1.4",
     "ini": "~1.1.0"
   },
   "keywords": [
@@ -39,7 +40,6 @@
     "email": "me@svenlito.com"
   },
   "devDependencies": {
-    "shelljs": "~0.1.4",
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-watch": "~0.4.4",
