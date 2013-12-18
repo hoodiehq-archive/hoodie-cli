@@ -10,6 +10,7 @@ Options:
   --template, -t <template>   template name (default: "hoodiehq/my-first-hoodie")
   --plugins, -p <plugin(s)>   installs hoodie plugin(s)
   --verbose                   verbose output
+  --keep-git                  keeps .git folder in checkout
 
 Examples:
 

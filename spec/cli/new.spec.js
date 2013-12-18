@@ -59,6 +59,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
+        keep: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname'] });
@@ -73,9 +74,25 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
+        keep: undefined,
         verbose: true
       };
       cli.argv({ _: ['new', 'appname'], verbose: true });
+      expect(hoodie.new.args[0][0]).to.eql(args);
+      expect(hoodie.new.args[0][1]).to.be.a('function');
+    });
+  });
+
+  describe('$ hoodie new "appname"', function() {
+    it('should try to create the app verbosely without deleting the .git folder', function() {
+      var args = {
+        name: 'appname',
+        template: undefined,
+        plugins: undefined,
+        keep: undefined,
+        verbose: true
+      };
+      cli.argv({ _: ['new', 'appname'], verbose: true, keep: true});
       expect(hoodie.new.args[0][0]).to.eql(args);
       expect(hoodie.new.args[0][1]).to.be.a('function');
     });
@@ -87,6 +104,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
+        keep: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -101,6 +119,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
+        keep: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -115,6 +134,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo#zipper',
         plugins: undefined,
+        keep: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo#zipper'] });
@@ -129,6 +149,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
+        keep: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -143,6 +164,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: 'users',
+        keep: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users'] });
@@ -157,6 +179,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: 'users,shares',
+        keep: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users,shares'] });
