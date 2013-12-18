@@ -59,6 +59,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
+        ssh: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname'] });
@@ -73,6 +74,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
+        ssh: undefined,
         verbose: true
       };
       cli.argv({ _: ['new', 'appname'], verbose: true });
@@ -87,6 +89,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
+        ssh: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -101,6 +104,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
+        ssh: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -115,6 +119,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo#zipper',
         plugins: undefined,
+        ssh: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo#zipper'] });
@@ -129,6 +134,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
+        ssh: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo'] });
@@ -143,6 +149,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: 'users',
+        ssh: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users'] });
@@ -157,6 +164,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: 'users,shares',
+        ssh: undefined,
         verbose: undefined
       };
       cli.argv({ _: ['new', 'appname', '50p/massive-hoodie-yo', 'users,shares'] });
