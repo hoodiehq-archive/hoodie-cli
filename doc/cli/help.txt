@@ -10,6 +10,8 @@ Commands:
   start                            start hoodie app
   install <plugin(s)>              install hoodie plugin
   uninstall <plugin(s)>            uninstall hoodie plugin
+  cache                            manipulate local cache
+  reset                            reset hoodie server password
 
 Options:
 
