@@ -5,7 +5,7 @@
   "preferGlobal": true,
   "dependencies": {
     "colors": "0.6.x",
-    "optimist": "0.3.x",
+    "optimist": "0.6.x",
     "which": "1.0.x",
     "cli-color": "~0.2.2",
     "prompt": "~0.2.9",
@@ -15,7 +15,9 @@
     "async": "0.2.9",
     "graceful-fs": "~2.0.1",
     "underscore": "1.5.2",
-    "rimraf": "~2.2.2"
+    "rimraf": "~2.2.2",
+    "shelljs": "~0.2.6",
+    "ini": "~1.1.0"
   },
   "keywords": [
     "cli",
@@ -38,11 +40,10 @@
     "email": "me@svenlito.com"
   },
   "devDependencies": {
-    "shelljs": "~0.1.4",
     "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.6.0",
-    "grunt-contrib-watch": "~0.4.4",
-    "mocha": "~1.13.0",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "mocha": "~1.14.0",
     "expect.js": "~0.2.0",
     "sinon": "~1.7.3",
     "grunt-simple-mocha": "~0.4.0"
