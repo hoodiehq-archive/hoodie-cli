@@ -89,7 +89,7 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
-        keep: undefined,
+        keep: true,
         verbose: true
       };
       cli.argv({ _: ['new', 'appname'], verbose: true, keep: true});
