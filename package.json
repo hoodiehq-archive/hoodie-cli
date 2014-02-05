@@ -1,7 +1,7 @@
 {
   "name": "hoodie-cli",
   "description": "Hoodie command-line interface.",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "preferGlobal": true,
   "dependencies": {
     "colors": "0.6.x",
