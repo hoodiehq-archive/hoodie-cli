@@ -6,7 +6,8 @@ Description:
 
 Options:
 
-  --plugins, -p <plugin>       single plugin name or comma separated list
+  --plugins, -p <plugin>      single plugin name or comma separated list
+  --verbose, -v               verbose output
 
 Examples:
 
