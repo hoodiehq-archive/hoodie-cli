@@ -15,5 +15,6 @@ Commands:
 
 Options:
 
-  -h, --help           output usage information
+  -h, --help                       output usage information
+  --verbose, -v                    verbose output
 

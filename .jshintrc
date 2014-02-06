@@ -61,7 +61,7 @@
   "multistr": true,
   "maxcomplexity": 15,
   "maxdepth": 4,
-  "maxstatements": 25,
+  "maxstatements": 40,
   "indent": 2
 }
 
