@@ -15,7 +15,9 @@
     "underscore": "1.5.2",
     "rimraf": "~2.2.2",
     "shelljs": "~0.2.6",
-    "ini": "~1.1.0"
+    "ini": "~1.1.0",
+    "semver": "~2.2.1",
+    "npm": "~1.4.2"
   },
   "keywords": [
     "cli",
