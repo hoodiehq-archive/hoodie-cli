@@ -55,7 +55,13 @@ describe('hoodie start', function() {
 
   describe('$ hoodie start', function() {
     it('should try to start the app', function() {
+      var args = {
+        noBrowser: undefined,
+        www: undefined,
+        sudo: undefined
+      };
       cli.argv({ _: ['start'] });
+      expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
   });
@@ -63,11 +69,11 @@ describe('hoodie start', function() {
   describe('$ hoodie start noBrowser', function() {
     it('should try to start the app with noBrowser', function() {
       var args = {
-        noBrowser: 'noBrowser',
+        noBrowser: true,
         www: undefined,
         sudo: undefined
       };
-      cli.argv({ _: ['start', 'noBrowser'] });
+      cli.argv({ _: ['start'], noBrowser: true});
       expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
@@ -76,11 +82,11 @@ describe('hoodie start', function() {
   describe('$ hoodie start --allow-sudo', function() {
     it('should try to start the app with --allow-sudo', function() {
       var args = {
-        noBrowser: 'noBrowser',
+        noBrowser: true,
         www: undefined,
         sudo: undefined
       };
-      cli.argv({ _: ['start', 'noBrowser'], sudo: true });
+      cli.argv({ _: ['start'], noBrowser: true });
       expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
@@ -89,11 +95,11 @@ describe('hoodie start', function() {
   describe('$ hoodie start noBrowser --www "production"', function() {
     it('should try to start the app with noBrowser and --www', function() {
       var args = {
-        noBrowser: 'noBrowser',
+        noBrowser: true,
         www: 'production',
         sudo: undefined
       };
-      cli.argv({ _: ['start', 'noBrowser', 'production'] });
+      cli.argv({ _: ['start'], noBrowser: true, www: 'production'});
       expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
