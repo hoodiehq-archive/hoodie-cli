@@ -6,18 +6,18 @@
   "dependencies": {
     "colors": "0.6.x",
     "optimist": "0.6.x",
-    "cli-color": "~0.2.2",
-    "prompt": "~0.2.9",
-    "update-notifier": "~0.1.3",
+    "cli-color": "0.2.2",
+    "prompt": "0.2.12",
+    "update-notifier": "0.1.3",
     "open": "0.0.4",
     "async": "0.2.9",
-    "graceful-fs": "~2.0.1",
+    "graceful-fs": "2.0.1",
     "underscore": "1.5.2",
-    "rimraf": "~2.2.2",
-    "shelljs": "~0.2.6",
-    "ini": "~1.1.0",
-    "semver": "~2.2.1",
-    "npm": "~1.4.2"
+    "rimraf": "2.2.2",
+    "shelljs": "0.2.6",
+    "ini": "1.1.0",
+    "semver": "2.2.1",
+    "npm": "1.4.2"
   },
   "keywords": [
     "cli",
