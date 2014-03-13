@@ -35,3 +35,14 @@ Un-/Installs a hoodie dependency via `npm`. Plugins are installed from the [hood
 hoodie install global-share
 # Cloned from https://github.com/hoodiehq/global-share
 ```
+
+#### Running hoodie as a daemon 
+
+Using `forever` 
+
+```bash
+forever start -o /var/log/app.out.log -e /var/log/app.err.log -a --killSignal=SIGTERM /path/to/myapp/node_modules/hoodie-server/bin/start
+```
+
+
+
