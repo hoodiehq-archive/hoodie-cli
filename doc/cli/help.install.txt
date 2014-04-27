@@ -13,5 +13,6 @@ Examples:
 
   $ $0 install
   $ $0 install users
+  $ $0 install hoodie-plugin-users
   $ $0 install -p "users"
   $ $0 install -p "users,shares,cheesecake"
