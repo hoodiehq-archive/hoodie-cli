@@ -48,6 +48,19 @@ module.exports = function (grunt) {
 
   });
 
+  grunt.registerTask('release', function() {
+
+    // Forward arguments to the bump-only task
+    this.args.unshift('bump-only');
+
+    grunt.task.run([
+      this.args.join(':'),
+      'changelog',
+      'bump-commit'
+    ]);
+
+  });
+
   // Default task.
   grunt.registerTask('default', ['jshint', 'simplemocha:full']);
   grunt.registerTask('test', ['jshint', 'simplemocha:full']);
