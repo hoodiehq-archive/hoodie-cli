@@ -2,15 +2,24 @@
 
 module.exports = function (grunt) {
 
-  "use strict";
+  'use strict';
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-simple-mocha');
-
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
+
+    bump: {
+      options: {
+        commitMessage: 'chore(release): v%VERSION%',
+        files: ['package.json'],
+        commitFiles: [
+          'package.json',
+          'CHANGELOG.md'
+        ],
+        pushTo: 'origin master'
+      }
+    },
 
     jshint: {
       files: [
@@ -39,8 +48,22 @@ module.exports = function (grunt) {
 
   });
 
+  grunt.registerTask('release', function() {
+
+    // Forward arguments to the bump-only task
+    this.args.unshift('bump-only');
+
+    grunt.task.run([
+      'test',
+      this.args.join(':'),
+      'changelog',
+      'bump-commit'
+    ]);
+
+  });
+
   // Default task.
-  grunt.registerTask('default', ['jshint', 'simplemocha:full']);
   grunt.registerTask('test', ['jshint', 'simplemocha:full']);
+  grunt.registerTask('default', ['test']);
 
 };
