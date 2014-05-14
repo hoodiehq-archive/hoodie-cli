@@ -50,6 +50,7 @@
     "expect.js": "~0.2.0",
     "sinon": "~1.7.3",
     "grunt-simple-mocha": "~0.4.0",
-    "load-grunt-tasks": "^0.4.0"
+    "load-grunt-tasks": "^0.4.0",
+    "grunt-conventional-changelog": "^1.1.0"
   }
 }
