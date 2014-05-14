@@ -49,6 +49,26 @@ describe('hoodie.new(options, [callback])', function() {
       });
     });
 
+
+  });
+
+  describe('rejected invalid slug', function() {
+
+    it('should trigger callback with an error', function() {
+      options.template = '50/yo-dawg/i-heard-yo-like#some-test';
+
+      hoodie.new(options, function(e) {
+        expect(e instanceof Error).to.be(true);
+      });
+
+      options.template = 'yo-dawg';
+
+      hoodie.new(options, function(e) {
+        expect(e instanceof Error).to.be(true);
+      });
+
+    });
+
   });
 
 });
