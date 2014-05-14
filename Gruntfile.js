@@ -54,6 +54,7 @@ module.exports = function (grunt) {
     this.args.unshift('bump-only');
 
     grunt.task.run([
+      'test',
       this.args.join(':'),
       'changelog',
       'bump-commit'
