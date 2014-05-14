@@ -2,12 +2,9 @@
 
 module.exports = function (grunt) {
 
-  "use strict";
+  'use strict';
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-simple-mocha');
-
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
