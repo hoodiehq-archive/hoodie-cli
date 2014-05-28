@@ -66,6 +66,14 @@ describe('hoodie install <plugins>', function() {
     });
   });
 
+  describe('$ hoodie install hoodie-plugin-users', function() {
+    it('should try to install a plugin', function() {
+      cli.argv({ _: ['install', 'hoodie-plugin-users'] });
+      args.plugins = 'hoodie-plugin-users';
+      expect(hoodie.install.calledWith(args)).to.be.ok();
+    });
+  });
+
   describe('$ hoodie install --plugin users', function() {
     it('should try to install a plugin', function() {
       cli.argv({ _: ['install', 'users'] });
