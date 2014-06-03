@@ -117,7 +117,7 @@ describe('hoodie start', function() {
         sudo: undefined,
         custom_ports: "6666,7777,8888"
       };
-      cli.argv({ _: ['start'], custom_ports: "6666,7777,8888"});
+      cli.argv({ _: ['start'], "custom-ports": "6666,7777,8888"});
       expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
