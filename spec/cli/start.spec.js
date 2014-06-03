@@ -109,8 +109,8 @@ describe('hoodie start', function() {
     });
   });
 
-  describe('$ hoodie start --custom_ports "6666,7777,8888"', function() {
-    it('should try to start the app with --custom_ports', function() {
+  describe('$ hoodie start --custom-ports "6666,7777,8888"', function() {
+    it('should try to start the app with --custom-ports', function() {
       var args = {
         noBrowser: undefined,
         www: undefined,
