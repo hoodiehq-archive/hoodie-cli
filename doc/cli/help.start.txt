@@ -5,11 +5,26 @@ Usage:
   $0 start -n | --nobrowser
   $0 start -s | --allow-sudo
   $0 start -w | --www <directory>
+  $0 start -c | --custom-ports <www_port>,<admin_port>,<couch_port>
   
 Options:
-  -n | --nobrowser   Whether to open browser upon hoodie start.
-  -s | --allow-sudo  Allow to start the app as a sudoer.
-  -w | --www         Set the directory hoodie will serve static assets from.
+  -n | --nobrowser    Whether to open browser upon hoodie start.
+  -s | --allow-sudo   Allow to start the app as a sudoer.
+  -w | --www          Set the directory hoodie will serve static assets from.
+  -c | --custom-ports Allow user-specified ports (www,admin,couch).
 
 Arguments:
   <directory>        Directory from where hoodie will serve static assets.
+  <www_port>         Port number at which hoodie will serve the user's application.
+  <admin_port>       Port number at which hoodie will serve the Admin Dashboard.
+  <couch_port>       Port number at which hoodie will serve CouchDB.
+
+Examples:
+
+  $ $0 start
+  $ $0 start --nobrowser
+  $ $0 start -n
+  $ $0 start -w "production"
+  $ $0 start --allow-sudo
+  $ $0 start -s
+  $ $0 start --custom-ports 7777,8888,9999
