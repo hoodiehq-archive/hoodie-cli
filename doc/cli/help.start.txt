@@ -9,7 +9,7 @@ Options:
   --nobrowser, -n     whether to open browser upon hoodie start
   --www, -w           set the directory hoodie will serve static assets from
   --allow-sudo, -s    allow to start the app as a sudoer
-  --custom-ports, -c  allow user-specified ports (couchdb,admin,www)
+  --custom-ports, -c  allow user-specified ports (admin,www)
 
 Examples:
 
@@ -19,4 +19,4 @@ Examples:
   $ $0 start -w "production"
   $ $0 start --allow-sudo
   $ $0 start -s
-  $ $0 start --custom-ports 6666,7777,8888
+  $ $0 start --custom-ports 7777,8888
