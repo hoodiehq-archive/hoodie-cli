@@ -1,10 +1,7 @@
-Usage: $0 cache <command>
+Manipulates local cache
 
-Description:
+Usage:
+  $0 cache <command>
 
-  Manipulates local cache
-
-Examples:
-
-  $ $0 cache clean
-  $ $0 cache list
+Arguments:
+  <command>  Command to perform on the cache (`list` or `clean`)
