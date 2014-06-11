@@ -1,18 +1,13 @@
-Usage: $0 install <plugin(s)>
+Installs hoodie plugin(s).
 
-Description:
-
-  Installs hoodie plugin(s)
-
+Usage:
+  $0 install
+  $0 install <plugin>...
+  $0 install -p <plugin>...
+  
 Options:
+  -p | --plugins  Plugin(s) to be installed.
+  -v | --verbose  Verbose output.
 
-  --plugins, -p <plugins>       single plugin name or comma separated list
-  --verbose, -v                 verbose output
-
-Examples:
-
-  $ $0 install
-  $ $0 install users
-  $ $0 install hoodie-plugin-users
-  $ $0 install -p "users"
-  $ $0 install -p "users,shares,cheesecake"
+Arguments:
+  <plugin>        Single plugin name or comma separated list.
