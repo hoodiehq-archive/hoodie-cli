@@ -1,20 +1,15 @@
-Usage: $0 <command> <parameters>
+Hoodie command-line tool.
 
-Description:
-
-  Hoodie command-line tool.
-
-Commands:
-
-  new <appname> [<template>]       create a hoodie project
-  start                            start hoodie app
-  install <plugin(s)>              install hoodie plugin
-  uninstall <plugin(s)>            uninstall hoodie plugin
-  cache                            manipulate local cache
-  reset                            reset hoodie server password
+Usage:
+  $0 new <appname> [<template>]
+  $0 start
+  $0 install <plugin>...
+  $0 uninstall <plugin>...
+  $0 cache
+  $0 reset
+  $0 -h | --help
+  $0 -v | --verbose
 
 Options:
-
-  -h, --help                       output usage information
-  --verbose, -v                    verbose output
-
+  -h --help     output usage information
+  -v --verbose  verbose output

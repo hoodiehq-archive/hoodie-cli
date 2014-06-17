@@ -1,17 +1,12 @@
-Usage: $0 uninstall <plugin(s)>
+Uninstalls hoodie plugin(s).
 
-Description:
-
-  Uninstalls hoodie plugin(s)
-
+Usage:
+  $0 uninstall <plugin>...
+  $0 uninstall -p <plugin>...
+  
 Options:
+  -p | --plugins  Plugin(s) to be uninstalled.
+  -v | --verbose  Verbose output.
 
-  --plugins, -p <plugin>      single plugin name or comma separated list
-  --verbose, -v               verbose output
-
-Examples:
-
-  $ $0 uninstall
-  $ $0 uninstall users
-  $ $0 uninstall -p  "users"
-  $ $0 uninstall -p  "users,shares,cheesecake"
+Arguments:
+  <plugin>        Single plugin name or comma separated list.
