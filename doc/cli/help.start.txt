@@ -1,22 +1,24 @@
-Usage: $0 start
+Starts newly created hoodie app.
 
-Description:
-
-  Starts newly created hoodie app
-
+Usage:
+  $0 start
+  $0 start -n | --nobrowser
+  $0 start -s | --allow-sudo
+  $0 start -w | --www <directory>
+  $0 start -c | --custom-ports <couch_port>,<admin_port>,<www_port>
+  
 Options:
+  -n | --nobrowser     Whether to open browser upon hoodie start.
+  -s | --allow-sudo    Allow to start the app as a sudoer.
+  -w | --www           Set the directory hoodie will serve static assets from.
+  -c | --custom-ports  allow user-specified ports (couch,admin,www)
 
-  --nobrowser, -n     whether to open browser upon hoodie start
-  --www, -w           set the directory hoodie will serve static assets from
-  --allow-sudo, -s    allow to start the app as a sudoer
-  --custom-ports, -c  allow user-specified ports (admin,www)
+  --nobrowser, -n   whether to open browser upon hoodie start
+  --www, -w         set the directory hoodie will serve static assets from
+  --allow-sudo, -s  allow to start the app as a sudoer
 
-Examples:
-
-  $ $0 start
-  $ $0 start nobrowser
-  $ $0 start -n
-  $ $0 start -w "production"
-  $ $0 start --allow-sudo
-  $ $0 start -s
-  $ $0 start --custom-ports 7777,8888
+Arguments:
+  <directory>        Directory from where hoodie will serve static assets.
+  <couch_port>       Port number at which hoodie will serve CouchDB
+  <admin_port>       Port number at which hoodie will serve Pocket
+  <www_port>         Port number at which hoodie will serve the user's application
