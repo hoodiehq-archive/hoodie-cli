@@ -109,15 +109,15 @@ describe('hoodie start', function() {
     });
   });
 
-  describe('$ hoodie start --custom-ports "7777,8888"', function() {
+  describe('$ hoodie start --custom-ports "6666,7777,8888"', function() {
     it('should try to start the app with --custom-ports', function() {
       var args = {
         noBrowser: undefined,
         www: undefined,
         sudo: undefined,
-        custom_ports: "7777,8888"
+        custom_ports: "6666,7777,8888"
       };
-      cli.argv({ _: ['start'], "custom-ports": "7777,8888"});
+      cli.argv({ _: ['start'], "custom-ports": "6666,7777,8888"});
       expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
