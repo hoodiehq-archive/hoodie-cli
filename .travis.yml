@@ -1,13 +1,16 @@
 before_script:
-- npm install -g grunt-cli
+  - npm install -g grunt-cli
+after_success:
+  - grunt ghrelease
 language: node_js
 node_js:
-- '0.10'
+  - '0.10'
 deploy:
   provider: npm
   email: me@svenlito.com
   api_key:
     secure: YREeUOw1K6UNi3KC0W5prxktLXCGIP/H9x749gpkyeuLADkIjHe8Dx3usJoELHxtGMeJpzcCGBhWDdyoStkLpglr6+J4714Tk9dZurzhCi2xioWaLJwnBM+n6V7TJIt1GcNZhuPMd6WZhsHqgORFiOUI37MMJRdZyUO4kQ9YaY0=
   on:
+    all_branches: true
     tags: true
     repo: hoodiehq/hoodie-cli
