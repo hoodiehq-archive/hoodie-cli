@@ -59,7 +59,7 @@ describe('hoodie start', function() {
         noBrowser: undefined,
         www: undefined,
         sudo: undefined,
-        custom_ports: undefined
+        'custom-ports': undefined
       };
       cli.argv({ _: ['start'] });
       expect(hoodie.start.args[0][0]).to.eql(args);
@@ -73,7 +73,7 @@ describe('hoodie start', function() {
         noBrowser: true,
         www: undefined,
         sudo: undefined,
-        custom_ports: undefined
+        'custom-ports': undefined
       };
       cli.argv({ _: ['start'], noBrowser: true});
       expect(hoodie.start.args[0][0]).to.eql(args);
@@ -87,7 +87,7 @@ describe('hoodie start', function() {
         noBrowser: true,
         www: undefined,
         sudo: undefined,
-        custom_ports: undefined
+        'custom-ports': undefined
       };
       cli.argv({ _: ['start'], noBrowser: true });
       expect(hoodie.start.args[0][0]).to.eql(args);
@@ -101,7 +101,7 @@ describe('hoodie start', function() {
         noBrowser: true,
         www: 'production',
         sudo: undefined,
-        custom_ports: undefined
+        'custom-ports': undefined
       };
       cli.argv({ _: ['start'], noBrowser: true, www: 'production'});
       expect(hoodie.start.args[0][0]).to.eql(args);
@@ -115,7 +115,7 @@ describe('hoodie start', function() {
         noBrowser: undefined,
         www: undefined,
         sudo: undefined,
-        custom_ports: "6666,7777,8888"
+        'custom-ports': "6666,7777,8888"
       };
       cli.argv({ _: ['start'], "custom-ports": "6666,7777,8888"});
       expect(hoodie.start.args[0][0]).to.eql(args);
