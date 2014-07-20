@@ -1,16 +1,20 @@
 before_script:
-  - npm install -g grunt-cli
+- npm install -g grunt-cli
 after_success:
-  - grunt ghrelease
+- grunt ghrelease
 language: node_js
 node_js:
-  - '0.10'
+- '0.10'
+notifications:
+  email: false
+env:
+  global:
+    secure: cPsGsdJ58fR08F9kYHZewwx1vBHLodfV8MuKWOAyhoFHz14tJHR+IDXU1K1OeFtEiDe1KyzTmq4Qul5O5EuGvLbhJLopD05dwZfVsndSfV2726vtfcSZKJ0cbd06JxTpP911Ft8Eipz7tMT99aBKj9OPwhQmKdz7tqq1MWTemC4=
 deploy:
   provider: npm
-  email: me@svenlito.com
+  email: stephan@thehoodiefirm.com
   api_key:
-    secure: YREeUOw1K6UNi3KC0W5prxktLXCGIP/H9x749gpkyeuLADkIjHe8Dx3usJoELHxtGMeJpzcCGBhWDdyoStkLpglr6+J4714Tk9dZurzhCi2xioWaLJwnBM+n6V7TJIt1GcNZhuPMd6WZhsHqgORFiOUI37MMJRdZyUO4kQ9YaY0=
+    secure: fF1ptoYbAXEOCmr++jjkD7tcChciqiM83nyoaQyIW2fuZRvSxXsO9C4enG/7aQ1F1eNb0wepwrBeqGb1mhT7fKEswoeTA3RREhnKU596gwLpzqzCzZW48lUHM94zd3r3hpl4WP3aH4ZAr2Gh3+O5TpoyUfiHXPhVqXuWmC0bSQs=
   on:
     all_branches: true
     tags: true
-    repo: hoodiehq/hoodie-cli
