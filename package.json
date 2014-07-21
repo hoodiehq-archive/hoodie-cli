@@ -1,7 +1,7 @@
 {
   "name": "hoodie-cli",
   "description": "Hoodie command-line interface.",
-  "version": "0.4.14",
+  "version": "0.5.1",
   "preferGlobal": true,
   "dependencies": {
     "async": "0.2.9",
@@ -33,7 +33,7 @@
     "url": "https://github.com/hoodiehq/hoodie-cli.git"
   },
   "scripts": {
-    "test": "grunt test --verbose"
+    "test": "grunt ci --verbose"
   },
   "bin": {
     "hoodie": "./bin/hoodie"
@@ -43,15 +43,14 @@
     "email": "sven@thehoodiefirm.com"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-watch": "~0.5.3",
-    "mocha": "~1.14.0",
-    "expect.js": "~0.2.0",
-    "sinon": "~1.7.3",
-    "grunt-simple-mocha": "~0.4.0",
-    "load-grunt-tasks": "^0.4.0",
-    "grunt-conventional-changelog": "^1.1.0",
-    "grunt-bump": "0.0.13"
+    "expect.js": "^0.3.1",
+    "grunt": "^0.4.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-release-hoodie": "^1.4.1",
+    "grunt-simple-mocha": "^0.4.0",
+    "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.20.1",
+    "sinon": "^1.10.3"
   }
 }

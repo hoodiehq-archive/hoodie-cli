@@ -1,8 +1,10 @@
-Usage: $0 new <name> [<template>]
+Creates a new application at the provided path.
 
-Description:
-
-  Creates a new application at the provided path.
+Usage:
+  $0 new
+  $0 new <name> [<template>]
+  $0 new -n <name> [-t <template>]
+  $0 new -n <name> [-t <template>] [-p <plugin>...]
 
 Options:
 
