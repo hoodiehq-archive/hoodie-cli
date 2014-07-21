@@ -59,7 +59,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
-        keep: undefined,
         ssh: undefined,
         verbose: undefined
       };
@@ -75,7 +74,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
-        keep: undefined,
         ssh: undefined,
         verbose: true
       };
@@ -91,11 +89,10 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: undefined,
         plugins: undefined,
-        keep: true,
         ssh: undefined,
         verbose: true
       };
-      cli.argv({ _: ['new', 'appname'], verbose: true, keep: true});
+      cli.argv({ _: ['new', 'appname'], verbose: true});
       expect(hoodie.new.args[0][0]).to.eql(args);
       expect(hoodie.new.args[0][1]).to.be.a('function');
     });
@@ -107,7 +104,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
-        keep: undefined,
         ssh: undefined,
         verbose: undefined
       };
@@ -123,7 +119,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
-        keep: undefined,
         ssh: undefined,
         verbose: undefined
       };
@@ -139,7 +134,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo#zipper',
         plugins: undefined,
-        keep: undefined,
         ssh: undefined,
         verbose: undefined
       };
@@ -155,7 +149,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: undefined,
-        keep: undefined,
         ssh: undefined,
         verbose: undefined
       };
@@ -171,7 +164,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: 'users',
-        keep: undefined,
         ssh: undefined,
         verbose: undefined
       };
@@ -187,7 +179,6 @@ describe('hoodie new <name>', function() {
         name: 'appname',
         template: '50p/massive-hoodie-yo',
         plugins: 'users,shares',
-        keep: undefined,
         ssh: undefined,
         verbose: undefined
       };

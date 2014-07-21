@@ -9,7 +9,6 @@ Options:
   --name, -n <name>           application name
   --template, -t <template>   template name (default: "hoodiehq/my-first-hoodie")
   --plugins, -p <plugin(s)>   installs hoodie plugin(s)
-  --keep-git, -k              keeps .git folder in cached checkout
   --use-ssh                   will install from `git@github.com:user/repo.git`
   --verbose, -v               verbose output
 
