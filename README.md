@@ -32,9 +32,6 @@ hoodie install global-share
 # Cloned from https://github.com/hoodiehq/global-share
 ```
 
-+ `hoodie cache`
-Manipulates local cache.
-
 + `hoodie reset`
 Resets hoodie server password.
 
