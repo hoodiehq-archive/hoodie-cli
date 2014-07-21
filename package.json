@@ -43,14 +43,14 @@
     "email": "me@svenlito.com"
   },
   "devDependencies": {
-    "expect.js": "~0.2.0",
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-watch": "~0.5.3",
+    "expect.js": "^0.3.1",
+    "grunt": "^0.4.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
     "grunt-release-hoodie": "^1.4.1",
-    "grunt-simple-mocha": "~0.4.0",
-    "load-grunt-tasks": "^0.4.0",
-    "mocha": "~1.14.0",
-    "sinon": "~1.7.3"
+    "grunt-simple-mocha": "^0.4.0",
+    "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.20.1",
+    "sinon": "^1.10.3"
   }
 }
