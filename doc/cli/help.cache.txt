@@ -1,7 +1,0 @@
-Manipulates local cache
-
-Usage:
-  $0 cache <command>
-
-Arguments:
-  <command>  Command to perform on the cache (`list` or `clean`)

@@ -5,7 +5,6 @@ Usage:
   $0 start
   $0 install <plugin>...
   $0 uninstall <plugin>...
-  $0 cache
   $0 reset
   $0 -h | --help
   $0 -v | --verbose

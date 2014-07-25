@@ -5,11 +5,18 @@ Usage:
   $0 new <name> [<template>]
   $0 new -n <name> [-t <template>]
   $0 new -n <name> [-t <template>] [-p <plugin>...]
-  
+
 Options:
-  -n | --name <name>          Application name.
-  -t | --template <template>  Template name (default: "hoodiehq/my-first-hoodie").
-  -p | --plugins <plugin>...  Installs hoodie plugin(s).
-  -k | --keep-git             Keeps .git folder in cached checkout.
-  --use-ssh                   Will install from `git@github.com:user/repo.git`.
-  -v | --verbose              Verbose output.
+
+  --name, -n <name>           application name
+  --template, -t <template>   template name (default: "hoodiehq/my-first-hoodie")
+  --plugins, -p <plugin(s)>   installs hoodie plugin(s)
+  --use-ssh                   will install from `git@github.com:user/repo.git`
+  --verbose, -v               verbose output
+
+Examples:
+
+  $ $0 new
+  $ $0 new hoodieapp
+  $ $0 new -n hoodieapp -t "50p/my-fresh-hoodie-yo"
+  $ $0 new -n hoodieapp -t "50p/my-fresh-hoodie-yo" -p "users,shares,cheesecake"
