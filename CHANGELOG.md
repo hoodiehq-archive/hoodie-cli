@@ -1,3 +1,12 @@
+<a name="0.5.2"></a>
+### 0.5.2 (2014-07-25)
+
+
+#### Bug Fixes
+
+* **update-notifier:** pass pkg details to update-notifier ([e5cdc9ac](https://github.com/hoodiehq/hoodie-cli/commit/e5cdc9ac00b1648c252df678d00e533c4cfe328d))
+
+
 <a name="0.5.1"></a>
 ### 0.5.1 (2014-07-17)
 
