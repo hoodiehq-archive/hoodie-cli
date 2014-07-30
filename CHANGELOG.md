@@ -1,3 +1,12 @@
+<a name="0.5.3"></a>
+### 0.5.3 (2014-07-30)
+
+
+#### Features
+
+* **process:** prevent hoodie-server from crashing ([e54a75e4](https://github.com/hoodiehq/hoodie-cli/commit/e54a75e4edc1cf8af29713528089deffcd0fc5af))
+
+
 <a name="0.5.2"></a>
 ### 0.5.2 (2014-07-25)
 
