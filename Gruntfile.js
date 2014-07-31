@@ -17,8 +17,7 @@ module.exports = function (grunt) {
             'package.json',
             'CHANGELOG.md'
           ]
-        },
-        tasks: ['test', 'changelog']
+        }
       }
     },
 
