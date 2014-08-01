@@ -1,3 +1,14 @@
+<a name="0.5.5"></a>
+### 0.5.5 (2014-08-01)
+
+
+#### Bug Fixes
+
+* **new:**
+  * log npm error messages ([d64cfc9b](https://github.com/hoodiehq/hoodie-cli/commit/d64cfc9b49530a4cf173197e89a7d5abffa13da8))
+  * use npm api rather than cli to fetch template ([51736586](https://github.com/hoodiehq/hoodie-cli/commit/51736586ed6127ddd1dd3331184f9593e5ea27b5))
+
+
 <a name="0.5.4"></a>
 ### 0.5.4 (2014-07-31)
 
