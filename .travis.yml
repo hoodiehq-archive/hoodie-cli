@@ -11,12 +11,12 @@ notifications:
   email: false
 env:
   global:
-    secure: cPsGsdJ58fR08F9kYHZewwx1vBHLodfV8MuKWOAyhoFHz14tJHR+IDXU1K1OeFtEiDe1KyzTmq4Qul5O5EuGvLbhJLopD05dwZfVsndSfV2726vtfcSZKJ0cbd06JxTpP911Ft8Eipz7tMT99aBKj9OPwhQmKdz7tqq1MWTemC4=
+  - secure: EAAejPpw+v+ooM5HQdRbQTSW85aAyKB51ADc30GnpD2TP4Cw8RgWHkYqEFm47X65b9UeZLp5CwzqWk9+QvTg09jloowvrLPCCEE+VznKx10Sb/chd0y9Dcg8L9vEUeWC2WKsL+xVMfsGyu3rILWWgvK5S3RH/C2n44X4ADa1doc=
 deploy:
   provider: npm
   email: stephan@thehoodiefirm.com
-  api_key:
-    secure: fF1ptoYbAXEOCmr++jjkD7tcChciqiM83nyoaQyIW2fuZRvSxXsO9C4enG/7aQ1F1eNb0wepwrBeqGb1mhT7fKEswoeTA3RREhnKU596gwLpzqzCzZW48lUHM94zd3r3hpl4WP3aH4ZAr2Gh3+O5TpoyUfiHXPhVqXuWmC0bSQs=
   on:
     all_branches: true
     tags: true
+  api_key:
+    secure: BKgTHGK2rBR5tWZ/7VSlyi+t0ttmFUyHbFv8t6pAMuvHC/TdZWQTGddosNsYLO5njTj9z4OHVz+/B8ESKcGHKAVjYPwdGSIMTgs8xXcG8FksTrKfwhTxckgYdPu2SghVkjczbJ3Frmn2KXxHWLpFepn52IIpyxTwUVw3VdGCTcg=

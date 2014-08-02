@@ -9,18 +9,6 @@ module.exports = function (grunt) {
   // Project configuration.
   grunt.initConfig({
 
-    release: {
-      options: {
-        bump: {
-          files: ['package.json'],
-          commitFiles: [
-            'package.json',
-            'CHANGELOG.md'
-          ]
-        }
-      }
-    },
-
     jshint: {
       files: [
         'Gruntfile.js',
