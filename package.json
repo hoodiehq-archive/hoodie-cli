@@ -1,7 +1,7 @@
 {
   "name": "hoodie-cli",
   "description": "Hoodie command-line interface.",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "preferGlobal": true,
   "dependencies": {
     "async": "^0.9.0",
@@ -53,5 +53,5 @@
     "mocha": "^1.20.1",
     "sinon": "^1.10.3"
   },
-  "codename": "posh-jellyfish"
+  "codename": "glorious-narwhal"
 }
