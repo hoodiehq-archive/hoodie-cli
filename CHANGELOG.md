@@ -1,3 +1,19 @@
+<a name="0.6.0"></a>
+## 0.6.0 (2014-08-07)
+
+
+#### Bug Fixes
+
+* **tracking:**
+  * fix syntax err ([8edca8f1](https://github.com/hoodiehq/hoodie-cli/commit/8edca8f1c8cc81447a99b0ec410ac12267f3fc5b))
+  * only set tracking code in non-ci env ([7a6bf73d](https://github.com/hoodiehq/hoodie-cli/commit/7a6bf73d85bc76e7e01b49437a220481eb84d559))
+
+
+#### Features
+
+* **analytics:** adds yeoman insights module ([48fb8903](https://github.com/hoodiehq/hoodie-cli/commit/48fb8903f0f6731fc994657dd2c0e3b73eb05134))
+
+
 <a name="0.5.6"></a>
 ### 0.5.6 (2014-08-04)
 
