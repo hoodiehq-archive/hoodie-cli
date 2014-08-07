@@ -14,7 +14,8 @@ describe('hoodie.install(options, [callback])', function() {
     hoodie = new Hoodie();
     options = {
       plugin: 'hoodie-plugin-users',
-      verbose: undefined
+      verbose: undefined,
+      link: undefined
     };
   });
 
