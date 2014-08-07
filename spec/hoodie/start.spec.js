@@ -13,7 +13,9 @@ describe('hoodie.start(options, [callback])', function() {
     options = {
       noBrowser: undefined,
       www: undefined,
-      sudo: undefined
+      sudo: undefined,
+      'custom-ports': undefined,
+      verbose: undefined
     };
     this.sandbox.stub(hoodie, 'start').returns(function(options, callback) {
       callback(null);

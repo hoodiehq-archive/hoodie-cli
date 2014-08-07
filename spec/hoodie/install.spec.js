@@ -14,8 +14,12 @@ describe('hoodie.install(options, [callback])', function() {
     hoodie = new Hoodie();
     options = {
       plugin: 'hoodie-plugin-users',
-      verbose: undefined
+      verbose: undefined,
+      link: undefined
     };
+    this.sandbox.stub(hoodie, 'install').returns(function(options, callback) {
+      callback(null);
+    });
   });
 
   it('should not require callback', function() {
@@ -25,12 +29,6 @@ describe('hoodie.install(options, [callback])', function() {
   });
 
   describe('successfully install a plugin', function() {
-
-    beforeEach(function() {
-      this.sandbox.stub(hoodie, 'install').returns(function(options, callback) {
-        callback(null);
-      });
-    });
 
     it('should trigger called without an error', function() {
       hoodie.install(options, function(e) {
