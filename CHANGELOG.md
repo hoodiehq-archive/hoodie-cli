@@ -1,3 +1,12 @@
+<a name="0.6.1"></a>
+### 0.6.1 (2014-09-08)
+
+
+#### Bug Fixes
+
+* **new:** install template from cache if possible ([383305f5](https://github.com/hoodiehq/hoodie-cli/commit/383305f54c7162b0ce65b3ca5ed3b0194860be97))
+
+
 <a name="0.6.0"></a>
 ## 0.6.0 (2014-08-07)
 
