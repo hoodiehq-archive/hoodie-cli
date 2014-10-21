@@ -1,3 +1,14 @@
+<a name="0.6.2"></a>
+### 0.6.2 (2014-10-21)
+
+
+#### Bug Fixes
+
+* **new:**
+  * allow to install specific template version ([e353c4ee](https://github.com/hoodiehq/hoodie-cli/commit/e353c4eecbe856ca578373b8026041b9f7338a7f))
+  * correct error handling for unpublished templates ([b123e5c3](https://github.com/hoodiehq/hoodie-cli/commit/b123e5c3c99ed041f43510f9f03eec97b1603800), closes [#149](https://github.com/hoodiehq/hoodie-cli/issues/149))
+
+
 <a name="0.6.1"></a>
 ### 0.6.1 (2014-09-08)
 
