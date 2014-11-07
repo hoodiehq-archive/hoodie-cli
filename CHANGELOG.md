@@ -1,3 +1,12 @@
+<a name="0.6.3"></a>
+### 0.6.3 (2014-11-07)
+
+
+#### Bug Fixes
+
+* **new:** get registry url via config api ([b8ef5485](https://github.com/hoodiehq/hoodie-cli/commit/b8ef54858a646329461f1380c1d0e690890451c6), closes [#151](https://github.com/hoodiehq/hoodie-cli/issues/151))
+
+
 <a name="0.6.2"></a>
 ### 0.6.2 (2014-10-21)
 
