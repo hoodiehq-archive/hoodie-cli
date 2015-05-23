@@ -69,7 +69,7 @@ describe('hoodie start', function() {
     });
   });
 
-  describe('$ hoodie start noBrowser', function() {
+  describe('$ hoodie start --noBrowser', function() {
     it('should try to start the app with noBrowser', function() {
       var args = {
         noBrowser: true,
@@ -88,21 +88,21 @@ describe('hoodie start', function() {
   describe('$ hoodie start --allow-sudo', function() {
     it('should try to start the app with --allow-sudo', function() {
       var args = {
-        noBrowser: true,
+        noBrowser: undefined,
         www: undefined,
-        sudo: undefined,
+        sudo: true,
         'custom-ports': undefined,
         verbose: undefined,
         force: undefined
       };
-      cli.argv({ _: ['start'], noBrowser: true });
+      cli.argv({ _: ['start'], 'allow-sudo': true });
       expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
   });
 
-  describe('$ hoodie start noBrowser --www "production"', function() {
-    it('should try to start the app with noBrowser and --www', function() {
+  describe('$ hoodie start --noBrowser --www "production"', function() {
+    it('should try to start the app with --noBrowser and --www', function() {
       var args = {
         noBrowser: true,
         www: 'production',
@@ -128,6 +128,22 @@ describe('hoodie start', function() {
         force: undefined
       };
       cli.argv({ _: ['start'], 'custom-ports': '6666,7777,8888'});
+      expect(hoodie.start.args[0][0]).to.eql(args);
+      expect(hoodie.start.args[0][1]).to.be.a('function');
+    });
+  });
+
+  describe('$ hoodie start --force', function() {
+    it('should try to start the app with --force', function() {
+      var args = {
+        noBrowser: undefined,
+        www: undefined,
+        sudo: undefined,
+        'custom-ports': undefined,
+        verbose: undefined,
+        force: true
+      };
+      cli.argv({ _: ['start'], force: true });
       expect(hoodie.start.args[0][0]).to.eql(args);
       expect(hoodie.start.args[0][1]).to.be.a('function');
     });
