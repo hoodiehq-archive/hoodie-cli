@@ -13,3 +13,4 @@ require('./hoodie/new.spec');
 require('./hoodie/start.spec');
 require('./hoodie/uninstall.spec');
 require('./hoodie/reset.spec');
+require('./integration/hoodie');

@@ -53,6 +53,7 @@
     "grunt-simple-mocha": "^0.4.0",
     "load-grunt-tasks": "^0.6.0",
     "mocha": "^1.20.1",
+    "nixt": "^0.4.1",
     "sinon": "^1.10.3"
   },
   "codename": "superb-ox"
