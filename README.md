@@ -43,3 +43,7 @@ Using `forever`
 ```bash
 forever start -o /var/log/app.out.log -e /var/log/app.err.log -a --killSignal=SIGTERM /path/to/myapp/node_modules/hoodie-server/bin/start
 ```
+
+## License
+
+[Apache 2.0](http://www.apache.org/licenses/LICENSE-2.0)

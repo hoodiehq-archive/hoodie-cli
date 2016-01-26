@@ -40,10 +40,7 @@
   "bin": {
     "hoodie": "./bin/hoodie"
   },
-  "author": {
-    "name": "Sven Lito",
-    "email": "sven@thehoodiefirm.com"
-  },
+  "author": "The Hoodie Community and other contributors | http://hood.ie/",
   "devDependencies": {
     "expect.js": "^0.3.1",
     "grunt": "^0.4.5",
@@ -56,5 +53,6 @@
     "nixt": "^0.4.1",
     "sinon": "^1.10.3"
   },
-  "codename": "superb-ox"
+  "codename": "superb-ox",
+  "license": "Apache-2.0"
 }
